@@ -1,0 +1,31 @@
+{
+  "status": "Figma review only; simulated, not connected to AWS",
+  "client": "Brightloop Retail",
+  "accounts": ["production", "staging", "development", "shared"],
+  "scope": {"current": ["2026-10-01", "2026-10-24"], "comparison": ["2026-09-01", "2026-09-24"], "currency": "USD", "costBasis": "amortized", "taxIncluded": false, "partialDaysIncluded": false},
+  "servicesMinorUnits": [
+    {"id": "ec2", "current": 1333700, "previous": 1224200},
+    {"id": "rds", "current": 685800, "previous": 685100},
+    {"id": "vpc", "current": 393500, "previous": 306200},
+    {"id": "s3", "current": 259200, "previous": 259700},
+    {"id": "cloudfront", "current": 189700, "previous": 189900},
+    {"id": "other", "current": 288500, "previous": 298500}
+  ],
+  "driverEvidence": [
+    {"service": "ec2", "account": "production", "owner": "Compute team", "usageType": "USE1-BoxUsage:m6i.2xlarge", "unit": "hours", "previousQuantity": 24000, "currentQuantity": 27000, "simulatedEffectiveRateUsd": 0.365, "unchangedOtherChargesMinorUnits": 348200, "deltaMinorUnits": 109500, "causalEvent": "Unconfirmed", "rateNote": "Synthetic effective amortized rate for this scenario, not a published AWS list-price quote"},
+    {"service": "vpc", "account": "production", "owner": "Platform team", "usageType": "USE1-NatGateway-Bytes", "unit": "GB", "previousQuantity": 40000, "currentQuantity": 59400, "simulatedEffectiveRateUsd": 0.045, "unchangedOtherChargesMinorUnits": 126200, "deltaMinorUnits": 87300, "causalEvent": "Unconfirmed", "rateNote": "Illustrative effective rate; not a deployment-specific pricing promise"}
+  ],
+  "forecastMinorUnits": {"actual": 3150400, "remainingEstimate": 1059100, "total": 4209500, "budget": 4800000, "headroom": 590500},
+  "cumulativeActualUsd": [1160,2325,3430,4580,5800,7020,8220,9510,10800,12030,13250,14420,15680,16920,18190,19480,20720,22220,23780,25360,26910,28500,30080,31504],
+  "identifiedMonthlySavingsMinorUnits": [
+    {"action": "Rightsize three production instances", "amount": 64000, "status": "Awaiting client review", "risk": "Medium; memory evidence must be reviewed", "owner": "Daniel Chen"},
+    {"action": "Schedule dev-worker-03", "amount": 18600, "status": "Awaiting client review", "risk": "Low; confirm out-of-hours jobs", "owner": "Daniel Chen"},
+    {"action": "Review legacy gp2 volume configuration", "amount": 24000, "status": "Awaiting consultant evidence", "risk": "Unassessed", "owner": "Maya Patel"}
+  ],
+  "verifiedMonthlySavingsMinorUnits": [
+    {"action": "Scheduled development shutdown", "amount": 32500},
+    {"action": "Removed unattached EBS volumes", "amount": 24000}
+  ],
+  "measurement": {"implemented": "2026-10-10", "baseline": ["2026-09-27", "2026-10-10"], "observation": ["2026-10-11", "2026-10-24"], "normalizationDays": 30, "assumptions": ["Comparable workloads", "Unchanged effective rates"], "meaning": "Measured monthly run rate, not cash saved in October"},
+  "assets": {"awsSource": "https://aws.amazon.com/architecture/icons/", "awsPackage": "Icon-package_07312026", "interface": "Installed Tabler Outline package"}
+}

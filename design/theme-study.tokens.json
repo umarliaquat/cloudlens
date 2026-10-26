@@ -1,0 +1,136 @@
+{
+  "status": "Locked visual foundation 01 — approved for application implementation",
+  "figma": "https://www.figma.com/design/L2rtizEUpABtAXHgCjgUdd/Cloud-Lens?node-id=2-1626",
+  "colors": {
+    "color-bg-canvas": "#FAFAF9",
+    "color-bg-surface": "#FFFFFF",
+    "color-bg-raised": "#FFFFFF",
+    "color-bg-subtle": "#F4F4F2",
+    "color-border-default": "#E6E6E2",
+    "color-border-strong": "#C9C9C3",
+    "color-text-primary": "#20201E",
+    "color-text-secondary": "#62625C",
+    "color-text-muted": "#72726B",
+    "color-text-inverse": "#FFFFFF",
+    "color-accent-default": "#D0440C",
+    "color-accent-hover": "#B93808",
+    "color-accent-subtle": "#FFF0E8",
+    "color-focus-ring": "#9A350D",
+    "color-brand-bright": "#FF5A1F",
+    "color-status-success-fg": "#20734F",
+    "color-status-success-bg": "#EDF7F0",
+    "color-status-success-border": "#BEDFC9",
+    "color-status-warning-fg": "#8A5A08",
+    "color-status-warning-bg": "#FFF7E6",
+    "color-status-warning-border": "#EBD5A3",
+    "color-status-danger-fg": "#B33B36",
+    "color-status-danger-bg": "#FFF0EE",
+    "color-status-danger-border": "#F0C9C4",
+    "color-status-info-fg": "#315F9D",
+    "color-status-info-bg": "#EEF4FC",
+    "color-status-info-border": "#C9D9F0",
+    "chart-1": "#D0440C",
+    "chart-2": "#315F9D",
+    "chart-3": "#20734F",
+    "chart-baseline": "#8C8C84",
+    "chart-forecast": "#B93808",
+    "chart-grid": "#E6E6E2",
+    "chart-axis-text": "#72726B",
+    "color-border-active": "#FFE1D1"
+  },
+  "numbers": {
+    "space-1": 4,
+    "space-2": 8,
+    "space-3": 12,
+    "space-4": 16,
+    "space-5": 20,
+    "space-6": 24,
+    "space-8": 32,
+    "space-10": 40,
+    "space-12": 48,
+    "radius-sm": 6,
+    "radius-md": 10,
+    "radius-lg": 16,
+    "font-size-xs": 12,
+    "font-size-sm": 14,
+    "font-size-base": 16,
+    "font-size-xl": 24,
+    "font-size-2xl": 32,
+    "font-size-3xl": 40,
+    "density-row-height-comfortable": 52
+  },
+  "typography": {
+    "sans": "Geist",
+    "mono": "Geist Mono",
+    "body": {
+      "size": 14,
+      "lineHeight": 21,
+      "letterSpacing": 0
+    },
+    "heading": {
+      "size": 32,
+      "lineHeight": 38,
+      "letterSpacing": "-2%"
+    }
+  },
+  "icons": {
+    "library": "Tabler",
+    "weight": "outline",
+    "navigationSize": 16,
+    "inlineSize": 16,
+    "source": "https://github.com/tabler/tabler-icons",
+    "iconOnlyControlSize": 40,
+    "sourceStrokeWidth": 2,
+    "sourceViewBox": 24
+  },
+  "primaryButton": {
+    "radius": 10,
+    "height": 40,
+    "innerShadow": {
+      "color": "#FFFFFF",
+      "opacity": 0.25,
+      "x": 0,
+      "y": 4,
+      "blur": 8.3,
+      "spread": 0
+    },
+    "border": {
+      "width": 1,
+      "gradient": [
+        "#F28754",
+        "#A73507"
+      ]
+    }
+  },
+  "validation": {
+    "buttonLabelContrast": 4.65,
+    "checkedTextOverflow": 0
+  },
+  "chips": {
+    "horizontalPadding": 10,
+    "gap": 16,
+    "layout": "Hug contents",
+    "verticalPadding": 4
+  },
+  "sidebar": {
+    "labelSize": 13,
+    "horizontalPadding": 12,
+    "radius": 6,
+    "width": 240,
+    "iconSize": 16,
+    "rowGap": 4,
+    "figma": "https://www.figma.com/design/L2rtizEUpABtAXHgCjgUdd/Cloud-Lens?node-id=2-2304",
+    "iconLabelGap": 8,
+    "rowHeight": 36,
+    "labelLineHeight": 20,
+    "activeShadow": {
+      "blur": 2,
+      "y": 1.5,
+      "color": "#030712",
+      "x": 0,
+      "spread": -1,
+      "opacity": 0.05
+    },
+    "activeBorderToken": "color-border-active"
+  }
+}

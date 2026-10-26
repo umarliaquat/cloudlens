@@ -1,0 +1,882 @@
+[
+  {
+    "feature": "virtual-tagging",
+    "url": "https://www.vantage.sh/features/virtual-tagging",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.1babf661.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration-mobile.972ae9b7.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/square.988d9e17.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/pbs.43b10024.svg",
+        "alt": "PBS"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/fanduel.19b18aed.svg",
+        "alt": "Fanduel"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/planet-scale.15c08cb8.svg",
+        "alt": "Planet Scale"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/barstool-sports.bd90ca71.svg",
+        "alt": "Barstool Sports"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/circleci.2e113a28.svg",
+        "alt": "CircleCI"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/decagon.5abf728d.svg",
+        "alt": "Decagon"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/canva.1630a0a1.svg",
+        "alt": "Canva"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/boomi.e7e68042.svg",
+        "alt": "Boomi"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/rippling.988e489e.svg",
+        "alt": "Rippling"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/hello-fresh.fc300dad.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/joybird.d98babb1.svg",
+        "alt": "Joybird"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/starburst.158a450d.svg",
+        "alt": "Starburst"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/metronome.a1238b4d.svg",
+        "alt": "Metronome"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffinops-tags-illustration.e0b90283.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Funify-tags-illustration.7dfc0cfd.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcustom-tags-illustration.3ddd995f.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnew-tags-illustration.0799444a.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fterraform-illustration.e0752670.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchange-log-illustration.490eb2bb.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  },
+  {
+    "feature": "budgets",
+    "url": "https://www.vantage.sh/features/budgets",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.ce7f8c8f.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration-mobile.beeddc50.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/square.988d9e17.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/pbs.43b10024.svg",
+        "alt": "PBS"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/fanduel.19b18aed.svg",
+        "alt": "Fanduel"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/planet-scale.15c08cb8.svg",
+        "alt": "Planet Scale"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/barstool-sports.bd90ca71.svg",
+        "alt": "Barstool Sports"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/circleci.2e113a28.svg",
+        "alt": "CircleCI"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/decagon.5abf728d.svg",
+        "alt": "Decagon"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/canva.1630a0a1.svg",
+        "alt": "Canva"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/boomi.e7e68042.svg",
+        "alt": "Boomi"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/rippling.988e489e.svg",
+        "alt": "Rippling"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/hello-fresh.fc300dad.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/joybird.d98babb1.svg",
+        "alt": "Joybird"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/starburst.158a450d.svg",
+        "alt": "Starburst"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/metronome.a1238b4d.svg",
+        "alt": "Metronome"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcentral-hub-illustration.49e6a989.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperiod-illustration.227c3aa0.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Falert-illustration.9a171589.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseamless-illustration.a790b0c8.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhierarchies-illustration.638a4bb5.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  },
+  {
+    "feature": "unit-costs",
+    "url": "https://www.vantage.sh/features/unit-costs",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.e245e2ac.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration-mobile.172ea682.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/square.988d9e17.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/pbs.43b10024.svg",
+        "alt": "PBS"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/fanduel.19b18aed.svg",
+        "alt": "Fanduel"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/planet-scale.15c08cb8.svg",
+        "alt": "Planet Scale"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/barstool-sports.bd90ca71.svg",
+        "alt": "Barstool Sports"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/circleci.2e113a28.svg",
+        "alt": "CircleCI"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/decagon.5abf728d.svg",
+        "alt": "Decagon"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/canva.1630a0a1.svg",
+        "alt": "Canva"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/boomi.e7e68042.svg",
+        "alt": "Boomi"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/rippling.988e489e.svg",
+        "alt": "Rippling"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/hello-fresh.fc300dad.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/joybird.d98babb1.svg",
+        "alt": "Joybird"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/starburst.158a450d.svg",
+        "alt": "Starburst"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/metronome.a1238b4d.svg",
+        "alt": "Metronome"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbusiness-metrics-illustration.5f59e37c.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcost-visibility-illustration.137e409b.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcogs-illustration.fab7dc09.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefresh-illustration.17840d5e.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  },
+  {
+    "feature": "canvas",
+    "url": "https://www.vantage.sh/features/canvas",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcreate-report-illustration.9ba87f49.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fconnect-illustration.2d5e2bb2.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftailored-illustration.c3cd30a3.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsource-illustration.31e57f0d.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  },
+  {
+    "feature": "network-flow-reports",
+    "url": "https://www.vantage.sh/features/network-flow-reports",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.7fc55900.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration-mobile.04a04025.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/square.988d9e17.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/pbs.43b10024.svg",
+        "alt": "PBS"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/fanduel.19b18aed.svg",
+        "alt": "Fanduel"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/planet-scale.15c08cb8.svg",
+        "alt": "Planet Scale"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/barstool-sports.bd90ca71.svg",
+        "alt": "Barstool Sports"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/circleci.2e113a28.svg",
+        "alt": "CircleCI"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/decagon.5abf728d.svg",
+        "alt": "Decagon"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/canva.1630a0a1.svg",
+        "alt": "Canva"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/boomi.e7e68042.svg",
+        "alt": "Boomi"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/rippling.988e489e.svg",
+        "alt": "Rippling"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/hello-fresh.fc300dad.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/joybird.d98babb1.svg",
+        "alt": "Joybird"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/starburst.158a450d.svg",
+        "alt": "Starburst"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/metronome.a1238b4d.svg",
+        "alt": "Metronome"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsetup-illustration.b82ecd10.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcross-az-illustration.222d3c08.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffilter-illustration.b297ebe5.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  },
+  {
+    "feature": "cost-reports",
+    "url": "https://www.vantage.sh/features/cost-reports",
+    "images": [
+      {
+        "url": "https://www.vantage.sh/_next/static/media/aws.34a57aa6.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/azure.dcbf123f.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/google-cloud.524ddb3d.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cloudflare.52b82617.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/openai.d3c829ac.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anthropic.d0c3b3a7.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/cursor.dd122dc4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/anyscale.19f1257b.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/datadog.8f28010e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grafana-cloud.d8e8dc41.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/new-relic.0c8cfc88.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/twilio.3b4fb525.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/kubernetes.ac14cf10.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/snowflake.e5c3c70e.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/mongodb.79953f0a.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/databricks.0eee00b4.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/grid.5792d992.svg",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.2eeccfe5.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration-mobile.5e7eaf1f.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/square.988d9e17.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/pbs.43b10024.svg",
+        "alt": "PBS"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/fanduel.19b18aed.svg",
+        "alt": "Fanduel"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/planet-scale.15c08cb8.svg",
+        "alt": "Planet Scale"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/barstool-sports.bd90ca71.svg",
+        "alt": "Barstool Sports"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/circleci.2e113a28.svg",
+        "alt": "CircleCI"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/decagon.5abf728d.svg",
+        "alt": "Decagon"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/canva.1630a0a1.svg",
+        "alt": "Canva"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/boomi.e7e68042.svg",
+        "alt": "Boomi"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/rippling.988e489e.svg",
+        "alt": "Rippling"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/hello-fresh.fc300dad.svg",
+        "alt": "Square"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/joybird.d98babb1.svg",
+        "alt": "Joybird"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/starburst.158a450d.svg",
+        "alt": "Starburst"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/static/media/metronome.a1238b4d.svg",
+        "alt": "Metronome"
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdata-illustration.713a7534.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmachine-learning-illustration.1b40942e.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnotification-illustration.ec5ef157.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fanomaly-illustration.534d9dd8.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Freporting-illustration.b4654ed5.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Falert-illustration.3c5e06c1.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      },
+      {
+        "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdashboard-illustration.03085277.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+        "alt": ""
+      }
+    ]
+  }
+]

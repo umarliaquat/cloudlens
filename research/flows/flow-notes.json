@@ -1,0 +1,106 @@
+[
+  {
+    "id":"vantage","title":"Vantage / Answer and share a cost question","role":"Engineer / FinOps analyst","goal":"Narrow spending, inspect its composition, compare it and share the same analysis.",
+    "route":"Filter → group → drill into a parent → inspect children → compare → export",
+    "scope":"6 official documentation screenshots. Different example reports and dates; this is a documented workflow map, not a continuous session recording.",
+    "adopt":"One analysis scope should survive every drill-down and the exported report.","avoid":"Changing only the table when a user groups the chart.","gap":"A saved-report confirmation is described in documentation but not captured here.",
+    "steps":[
+      {"asset":"vantage-report-2","title":"01 / Define the scope","description":"Choose provider, dimension and matching rule. The filter is visible before analysis begins.","next":"Next: choose how to break down that scope."},
+      {"asset":"vantage-report-6","title":"02 / Reveal composition","description":"Group selections change the segmented time chart; its colors distinguish cost contributors.","next":"Next: investigate a business grouping."},
+      {"asset":"vantage-report-8","title":"03 / Pick a parent group","description":"The table exposes nested business units and a drill-down control beside each row.","next":"Next: expand the relevant unit."},
+      {"asset":"vantage-report-9","title":"04 / Inspect its children","description":"Application-level rows appear under the selected unit, retaining the parent context.","next":"Next: compare the costs that matter."},
+      {"asset":"vantage-report-13","title":"05 / Compare periods","description":"Paired bars make current and previous costs directly comparable for each category.","next":"Next: share the analysis."},
+      {"asset":"vantage-report-15","title":"06 / Share an evidence snapshot","description":"The exported document retains report identity, dates, costs, series and a link back.","next":"Outcome: a reviewable report rather than an isolated number."}
+    ]
+  },
+  {
+    "id":"doit","title":"DoiT / Investigate and resolve an anomaly","role":"Cloud engineer / consultant","goal":"Determine whether a spike is meaningful, inspect contributors and record the response.",
+    "route":"Observe deviation → find contributors → investigate scope → classify → explain → preserve history",
+    "scope":"7 official help-center screenshots. Examples span different workloads, providers and dates; do not interpret their amounts as one reconciled incident.",
+    "adopt":"Carry anomaly scope into analysis, and preserve classification, explanation and actor history.","avoid":"Showing a spike without expected values or treating every increase as waste.","gap":"No authenticated incident was changed; saved-state behavior was not exercised.",
+    "steps":[
+      {"asset":"doit-detail-1","title":"01 / Establish the deviation","description":"Excess cost, actual cost, expected ceiling and event timing precede a chart with the normal range.","next":"Next: inspect the contributing resources."},
+      {"asset":"doit-detail-5","title":"02 / Identify contributors","description":"Rows expose SKU, account, resource, tags and monetary contribution for investigation.","next":"Next: open the scoped report."},
+      {"asset":"doit-detail-6","title":"03 / Explore the event context","description":"The report combines a segmented chart with provider, service and billing filters.","next":"Next: decide how to classify the incident."},
+      {"asset":"doit-review-1","title":"04 / Classify the response","description":"Investigation progress is separate from whether the detected increase is genuine or expected.","next":"Next: record the resolution context."},
+      {"asset":"doit-review-2","title":"05 / Explain the resolution","description":"A classification form offers structured reasons and a place for context before saving.","next":"Next: make the reasoning available to others."},
+      {"asset":"doit-review-4","title":"06 / Preserve discussion","description":"Dated comments retain the investigation narrative alongside the resolution.","next":"Next: inspect the recorded event history."},
+      {"asset":"doit-review-5","title":"07 / Verify traceability","description":"The timeline exposes status transitions, actors and notification activity.","next":"Outcome: later reviewers can reconstruct the response."}
+    ]
+  },
+  {
+    "id":"cloudzero","title":"CloudZero / Turn an investigation into tracked work","role":"Engineer / cost owner","goal":"Connect a spending change to resources and capture the finding for follow-through.",
+    "route":"Business view → change contributors → resource evidence → create Insight → track → return to context",
+    "scope":"6 official documentation screenshots, published as separate examples. Values and selected resources differ between screens; the navigation relationship is documented.",
+    "adopt":"A finding should carry its evidence link, impact and work status into the team queue.","avoid":"Separating the recommendation story from the analysis that supports it.","gap":"The creation form and resulting queue are examples, not a replay proving one item was saved.",
+    "steps":[
+      {"asset":"cloudzero-explorer-2","title":"01 / Orient around business ownership","description":"A business-unit chart pairs total cost with a comparable change, showing composition over time.","next":"Next: inspect the largest contributors."},
+      {"asset":"cloudzero-explorer-3","title":"02 / Rank changes, not only spend","description":"Resource rows pair total cost with absolute and percentage change; decreases remain visible.","next":"Next: inspect a resource."},
+      {"asset":"cloudzero-explorer-7","title":"03 / Check the resource context","description":"A drawer combines resource trend, configuration summary and cost-allocation tags.","next":"Next: capture a finding in the investigation context."},
+      {"asset":"cloudzero-insights-4","title":"04 / Record a finding","description":"The form captures title, category, description, impact, an analysis link, status and effort.","next":"Next: track it with other findings."},
+      {"asset":"cloudzero-insights-2","title":"05 / Manage the work queue","description":"An impact summary and status distribution sit above a searchable, filterable findings table.","next":"Next: reopen a finding."},
+      {"asset":"cloudzero-insights-3","title":"06 / Resume with context","description":"The detail panel retains description, impact and an Explorer return path beside its work controls.","next":"Outcome: the finding remains connected to the original investigation."}
+    ]
+  },
+  {
+    "id":"nops","title":"nOps / Prioritize, evaluate and implement savings","role":"FinOps analyst / infrastructure engineer","goal":"Find worthwhile opportunities, assess consequences and follow implementation progress.",
+    "route":"Opportunity feed → prioritized summary → recommendation evidence → instructions → savings history",
+    "scope":"5 vendor-published screenshots from a November 2025 announcement. This is a public example workflow, not a tested account; no AWS action was executed.",
+    "adopt":"Effort, implementation constraints and evidence belong beside the savings estimate.","avoid":"Copying an execution shortcut into CloudLens, which does not change AWS infrastructure.","gap":"A completion confirmation is not shown. The source calculates savings tracking from recommendation estimates; independent causal measurement is unproven here.",
+    "steps":[
+      {"asset":"nops-recs-6","title":"01 / Surface opportunities in context","description":"The feed brings recommendation themes into a recurring work surface.","next":"Next: review the opportunity portfolio."},
+      {"asset":"nops-recs-2","title":"02 / Prioritize by return and effort","description":"The page separates potential savings, effort bands and achieved savings above actionable themes.","next":"Next: inspect one recommendation."},
+      {"asset":"nops-recs-4","title":"03 / Evaluate impact and constraints","description":"The detail example shows estimated saving, effort, age, current/projected cost and implementation considerations.","next":"Next: review the procedure."},
+      {"asset":"nops-recs-3","title":"04 / Understand implementation","description":"A separate instruction view explains the resource-specific procedure and cautions.","next":"Next: implementation happens outside this research exercise."},
+      {"asset":"nops-recs-5","title":"05 / Review the savings history","description":"The history distinguishes accumulated savings from a recurring monthly savings rate.","next":"Outcome shown: historical savings reporting; measurement methodology must be checked."}
+    ]
+  },
+  {
+    "id":"datadog","title":"Datadog / Move from recommendation to owned action","role":"Engineer / FinOps analyst","goal":"Filter opportunities, inspect operational evidence and hand off implementation.",
+    "route":"Overview → filtered queue → resource evidence → tracked handoff | alternative: native action | upstream: rule tuning",
+    "scope":"6 vendor-published screenshots from an August 2025 walkthrough. Cards 04–06 illustrate alternative routes, not mandatory consecutive steps. Datasets differ.",
+    "adopt":"Pair resource evidence with accountable work and a return link; show changes and impact together.","avoid":"Assuming approval, resource execution and verified savings are the same state.","gap":"Ticket/case creation entry points are visible; completed ticket histories and achieved savings are not captured.",
+    "steps":[
+      {"asset":"datadog-blog-7","title":"01 / Find the opportunity mix","description":"A summary groups recommendations by savings potential and action category.","next":"Next: narrow the queue."},
+      {"asset":"datadog-blog-8","title":"02 / Filter actionable resources","description":"Provider and recommendation filters narrow rows containing savings, resource context and status.","next":"Next: inspect evidence before choosing an action."},
+      {"asset":"datadog-blog-13","title":"03 / Inspect evidence and ownership route","description":"The resource panel compares current/proposed configuration with CPU or memory evidence and a case entry point.","next":"Next: create owned work or choose another route."},
+      {"asset":"datadog-blog-12","title":"04A / Hand off to a tracked issue","description":"Selected resources can be grouped into an implementation ticket from the queue.","next":"Branch outcome: a linked work item, not proof of implementation."},
+      {"asset":"datadog-blog-11","title":"04B / Alternative: scoped execution","description":"An action form exposes connection, region, volume and approval/notification controls.","next":"Alternative route only; execution was not tested."},
+      {"asset":"datadog-blog-10","title":"Upstream / Tune recommendation rules","description":"Evaluation window, resource scope and rationale can be configured for the organization.","next":"Feedback loop: adapt detection to operational constraints."}
+    ]
+  },
+  {
+    "id":"aws","title":"AWS / Configure monitoring, then investigate","role":"AWS administrator / cost owner","goal":"Separate monitored scope from delivery rules, then connect an alert to investigation.",
+    "route":"A: monitor list → define scope → subscription list → alert rules   /   B: anomaly investigation → explanation",
+    "scope":"6 official screenshots. A uses a historical March 2023 walkthrough. B uses a June 2026 investigation release. These are explicitly separate versions and sequences.",
+    "adopt":"Keep monitoring scope, notification policy and incident evidence distinct.","avoid":"Treating older AWS screenshots as a current visual specification, or assuming detection is immediate.","gap":"No save confirmation or alert delivery was exercised. Current permissions and availability require account-level validation.",
+    "steps":[
+      {"asset":"aws-walkthrough-8","title":"A1 / Review monitored scopes","description":"The historical monitor table names each scope and its monitor type.","next":"2023 example → create or adjust a monitor."},
+      {"asset":"aws-walkthrough-9","title":"A2 / Define what to monitor","description":"The setup form separates monitor type, linked accounts and naming.","next":"2023 example → configure notification delivery."},
+      {"asset":"aws-walkthrough-10","title":"A3 / Review subscriptions","description":"A separate list exposes thresholds, frequency, subscribers and attached monitors.","next":"2023 example → edit delivery conditions."},
+      {"asset":"aws-walkthrough-11","title":"A4 / Set delivery conditions","description":"Recipients, schedule and combined dollar/percentage conditions are explicit inputs.","next":"Documented endpoint: save the subscription; confirmation not pictured."},
+      {"asset":"aws-investigate-6","title":"B1 / Start an evidence investigation","description":"The newer anomaly interface offers an Amazon Q investigation entry point.","next":"Separate 2026 sequence → inspect the resulting analysis."},
+      {"asset":"aws-investigate-7","title":"B2 / Inspect the analysis","description":"The published explanation illustrates contextual investigation rather than a standalone total.","next":"2026 example; no live query or causal claim was tested here."}
+    ]
+  },
+  {
+    "id":"cloudhealth","title":"CloudHealth / Partner reporting references","role":"MSP commercial operations","goal":"Understand the distinct commercial questions answered by customer reports.",
+    "route":"Parallel report destinations: invoice reconciliation | customer cost history | partner margin history",
+    "scope":"PARTIAL COVERAGE • 3 official report screenshots with historical 2017–2018 example data. These are parallel reports, not a captured end-to-end customer onboarding flow.",
+    "adopt":"Keep partner commercial data separate from customer-facing consumption context.","avoid":"Adding invoices or reseller margin to CloudLens: those are outside the PRD scope.","gap":"Current tenant selection, report configuration and delivery screens were not available in this reference set. Do not claim a complete live MSP flow.",
+    "steps":[
+      {"asset":"cloudhealth-partner-0","title":"Reference A / Reconcile invoices","description":"The report identifies customer, invoice month and billed total for reconciliation.","next":"Separate commercial task, not an engineering investigation."},
+      {"asset":"cloudhealth-partner-1","title":"Reference B / Compare customer spending","description":"A monthly stacked chart separates customer contributions to partner-managed spending.","next":"Use to understand cross-customer consumption changes."},
+      {"asset":"cloudhealth-partner-2","title":"Reference C / Review partner economics","description":"The margin chart answers a reseller profitability question rather than a client usage question.","next":"Keep this outside the proposed CloudLens homepage."}
+    ]
+  },
+  {
+    "id":"flexera","title":"Flexera One / Lifecycle evidence and screen gap","role":"Optimization owner","goal":"Understand documented state transitions without inventing missing product screens.",
+    "route":"Documented route: savings summary → recommendation table → detail/action menu → snooze or reject",
+    "scope":"PARTIAL COVERAGE • One official state diagram, not a product screenshot. The linked documentation describes UI steps; this pass did not obtain a complete public screenshot sequence.",
+    "adopt":"Status definitions must explain timing and the effect on potential savings.","avoid":"Drawing plausible interface screens and presenting them as competitor evidence.","gap":"Missing: summary, table, detail, action dialog and success screens. Documentation says marking Realized is API-only; do not invent a matching UI button.",
+    "steps":[
+      {"asset":"flexera-status-diagram","title":"Vendor diagram / State relationships","description":"The diagram distinguishes active, deferred, rejected and realized states. It documents relationships, not the interaction design.","next":"Read the official status instructions. A product walkthrough is still required for visual validation."}
+    ]
+  }
+]

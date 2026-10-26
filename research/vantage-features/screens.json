@@ -1,0 +1,110 @@
+[
+  {
+    "feature": "virtual-tagging",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.1babf661.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/virtual-tagging-0.png",
+    "status": 200
+  },
+  {
+    "feature": "virtual-tagging",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffinops-tags-illustration.e0b90283.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/virtual-tagging-1.png",
+    "status": 200
+  },
+  {
+    "feature": "virtual-tagging",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Funify-tags-illustration.7dfc0cfd.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/virtual-tagging-2.png",
+    "status": 200
+  },
+  {
+    "feature": "budgets",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.ce7f8c8f.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/budgets-0.png",
+    "status": 200
+  },
+  {
+    "feature": "budgets",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcentral-hub-illustration.49e6a989.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/budgets-1.png",
+    "status": 200
+  },
+  {
+    "feature": "budgets",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperiod-illustration.227c3aa0.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/budgets-2.png",
+    "status": 200
+  },
+  {
+    "feature": "unit-costs",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.e245e2ac.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/unit-costs-0.png",
+    "status": 200
+  },
+  {
+    "feature": "unit-costs",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbusiness-metrics-illustration.5f59e37c.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/unit-costs-1.png",
+    "status": 200
+  },
+  {
+    "feature": "unit-costs",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcost-visibility-illustration.137e409b.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/unit-costs-2.png",
+    "status": 200
+  },
+  {
+    "feature": "canvas",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcreate-report-illustration.9ba87f49.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/canvas-0.png",
+    "status": 200
+  },
+  {
+    "feature": "canvas",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fconnect-illustration.2d5e2bb2.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/canvas-1.png",
+    "status": 200
+  },
+  {
+    "feature": "canvas",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftailored-illustration.c3cd30a3.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/canvas-2.png",
+    "status": 200
+  },
+  {
+    "feature": "network-flow-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.7fc55900.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/network-flow-reports-0.png",
+    "status": 200
+  },
+  {
+    "feature": "network-flow-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsetup-illustration.b82ecd10.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/network-flow-reports-1.png",
+    "status": 200
+  },
+  {
+    "feature": "network-flow-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcross-az-illustration.222d3c08.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/network-flow-reports-2.png",
+    "status": 200
+  },
+  {
+    "feature": "cost-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-illustration.2eeccfe5.png&w=3840&q=100&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/cost-reports-0.png",
+    "status": 200
+  },
+  {
+    "feature": "cost-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdata-illustration.713a7534.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/cost-reports-1.png",
+    "status": 200
+  },
+  {
+    "feature": "cost-reports",
+    "url": "https://www.vantage.sh/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmachine-learning-illustration.1b40942e.png&w=1080&q=75&dpl=dpl_A4XX8TypuykXRC6NSTFE1qMxZ998",
+    "path": "research/vantage-features/assets/cost-reports-2.png",
+    "status": 200
+  }
+]

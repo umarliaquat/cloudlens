@@ -1,0 +1,18 @@
+const fs=require('fs');
+const file='src/components/cloudlens-app.tsx';
+let s=fs.readFileSync(file,'utf8');
+if(s.includes('import { OverviewHome }'))throw Error('Already integrated');
+s=s.replace('import { WorkspacePages } from "./workspace/workspace-pages";','import { WorkspacePages } from "./workspace/workspace-pages";\nimport { OverviewHome } from "./overview-home";');
+let start=s.indexOf('              <div className="page-heading scaffold">');
+let end=s.indexOf('              {isLoading ? (',start);
+if(start<0||end<0)throw Error('Header anchor missing');
+s=s.slice(0,start)+s.slice(end);
+start=s.indexOf('                      <MetricGroups />',start);
+end=s.indexOf('                      {Prompts}',start)+'                      {Prompts}'.length;
+if(start<0||end<0)throw Error('Overview anchor missing');
+s=s.slice(0,start)+'                      <OverviewHome overview={overview} recommendations={recommendations} budget={budget} role={role} onOpen={open} onPeriod={setPeriod} notify={setToast} audit={audit} />'+s.slice(end);
+s=s.replace('                  <footer className="page-footer">','                  {variant !== "a" && <footer className="page-footer">').replace('                  </footer>','                  </footer>}');
+s=s.replace('<span>Client workspace</span>','{activePage !== "overview" && <span>Client workspace</span>}');
+s=s.replace('<span className="data-freshness">','{activePage !== "overview" && <span className="data-freshness">').replace('Updated at 08:00 UTC\n            </span>','Updated at 08:00 UTC\n            </span>}');
+s=s.replace('? "Assigned client workspace"\n              : "Client workspace"','? "Assigned demo client"\n              : "Demo client"');
+fs.writeFileSync(file,s);

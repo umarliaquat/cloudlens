@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
+test-results/
+.vercel/
+*.log
+
+# Downloaded reference captures and generated design/research artifacts.
+research/flows/raw/
+research/flows/assets/
+research/flows/imports/
+research/flows/review*.jpg
+research/vantage-features/assets/
+research/vantage-features/review*.jpg
+design/homepage-review/assets/
+design/homepage-review/*-build.figma.js
+design/homepage-review/build.figma.js

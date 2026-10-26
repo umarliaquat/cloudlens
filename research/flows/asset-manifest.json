@@ -1,0 +1,722 @@
+[
+  {
+    "alt": "Selecting matching criteria for a filter in a Cost Report",
+    "url": "https://assets.vantage.sh/docs/resource-filter-options.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-2",
+    "path": "research/flows/assets/vantage-report-2.png",
+    "bytes": 86824,
+    "type": "image/png",
+    "size": [
+      847,
+      527
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-2.jpg",
+    "importSize": [
+      1800,
+      1120
+    ]
+  },
+  {
+    "alt": "A Cost Report that is enabled with Multi-dimensional Grouping",
+    "url": "https://assets.vantage.sh/docs/cost-report-grouping.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-6",
+    "path": "research/flows/assets/vantage-report-6.png",
+    "bytes": 110175,
+    "type": "image/png",
+    "size": [
+      1390,
+      559
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-6.jpg",
+    "importSize": [
+      1800,
+      724
+    ]
+  },
+  {
+    "alt": "Drilling down by parent nested tag",
+    "url": "https://assets.vantage.sh/docs/nested-drilldown-1.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-8",
+    "path": "research/flows/assets/vantage-report-8.png",
+    "bytes": 69747,
+    "type": "image/png",
+    "size": [
+      593,
+      446
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-8.jpg",
+    "importSize": [
+      1800,
+      1354
+    ]
+  },
+  {
+    "alt": "Drilling down by subtag",
+    "url": "https://assets.vantage.sh/docs/nested-drilldown-2.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-9",
+    "path": "research/flows/assets/vantage-report-9.png",
+    "bytes": 54391,
+    "type": "image/png",
+    "size": [
+      585,
+      446
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-9.jpg",
+    "importSize": [
+      1800,
+      1372
+    ]
+  },
+  {
+    "alt": "Comparative bar chart showing current vs previous period costs by region",
+    "url": "https://assets.vantage.sh/docs/comparative-cost-reporting.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-13",
+    "path": "research/flows/assets/vantage-report-13.png",
+    "bytes": 42188,
+    "type": "image/png",
+    "size": [
+      1398,
+      321
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-13.jpg",
+    "importSize": [
+      1800,
+      413
+    ]
+  },
+  {
+    "alt": "Example PDF export of a Cost Report",
+    "url": "https://assets.vantage.sh/docs/pdf-export.png",
+    "source": "https://docs.vantage.sh/cost_reports/",
+    "id": "vantage-report-15",
+    "path": "research/flows/assets/vantage-report-15.png",
+    "bytes": 178202,
+    "type": "image/png",
+    "size": [
+      1115,
+      788
+    ],
+    "importPath": "research\\flows\\imports\\vantage-report-15.jpg",
+    "importSize": [
+      1800,
+      1272
+    ]
+  },
+  {
+    "alt": "The details page of a cost anomaly",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-page-f381e791710b5d1be0b41e29ee62cef5.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+    "id": "doit-detail-1",
+    "path": "research/flows/assets/doit-detail-1.png",
+    "bytes": 52187,
+    "type": "image/png",
+    "size": [
+      2110,
+      1290
+    ],
+    "importPath": "research\\flows\\imports\\doit-detail-1.jpg",
+    "importSize": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "alt": "The cost anomaly contributors",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-contributory-resource-2d673a041cb584c0caaee7f64ad677e1.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+    "id": "doit-detail-5",
+    "path": "research/flows/assets/doit-detail-5.png",
+    "bytes": 54098,
+    "type": "image/png",
+    "size": [
+      2158,
+      920
+    ],
+    "importPath": "research\\flows\\imports\\doit-detail-5.jpg",
+    "importSize": [
+      1800,
+      767
+    ]
+  },
+  {
+    "alt": "Investigative report of a cost anomaly",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-in-report-ee49ce06a6c2c197b06104d8244f81bb.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+    "id": "doit-detail-6",
+    "path": "research/flows/assets/doit-detail-6.png",
+    "bytes": 94441,
+    "type": "image/png",
+    "size": [
+      2872,
+      1630
+    ],
+    "importPath": "research\\flows\\imports\\doit-detail-6.jpg",
+    "importSize": [
+      1800,
+      1022
+    ]
+  },
+  {
+    "alt": "Review status",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-review-status-cac49372390e530d95cdd1c21443cf68.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+    "id": "doit-review-1",
+    "path": "research/flows/assets/doit-review-1.png",
+    "bytes": 30100,
+    "type": "image/png",
+    "size": [
+      790,
+      490
+    ],
+    "importPath": "research\\flows\\imports\\doit-review-1.jpg",
+    "importSize": [
+      1800,
+      1116
+    ]
+  },
+  {
+    "alt": "Complete the status change",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-acknowledge-a7eb815a16144fd104011208a3416063.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+    "id": "doit-review-2",
+    "path": "research/flows/assets/doit-review-2.png",
+    "bytes": 40789,
+    "type": "image/png",
+    "size": [
+      874,
+      734
+    ],
+    "importPath": "research\\flows\\imports\\doit-review-2.jpg",
+    "importSize": [
+      1800,
+      1512
+    ]
+  },
+  {
+    "alt": "Comments are recorded in the comment history",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-comment-history-710755eb72159f47bd8ac6c3dd76efe3.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+    "id": "doit-review-4",
+    "path": "research/flows/assets/doit-review-4.png",
+    "bytes": 43414,
+    "type": "image/png",
+    "size": [
+      744,
+      1232
+    ],
+    "importPath": "research\\flows\\imports\\doit-review-4.jpg",
+    "importSize": [
+      1087,
+      1800
+    ]
+  },
+  {
+    "alt": "Status changes are recorded in the activity history",
+    "url": "https://help.doit.com/assets/images/console-cost-anomaly-activity-history-8a0755c38767f7a7f98b1e8faf2c6593.png",
+    "source": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+    "id": "doit-review-5",
+    "path": "research/flows/assets/doit-review-5.png",
+    "bytes": 34812,
+    "type": "image/png",
+    "size": [
+      668,
+      958
+    ],
+    "importPath": "research\\flows\\imports\\doit-review-5.jpg",
+    "importSize": [
+      1255,
+      1800
+    ]
+  },
+  {
+    "alt": "Explorer showing daily costs grouped by Business Unit",
+    "url": "https://files.readme.io/41de34a4142b635a09157a05722bd558200a54d4d042e32f70f8b3c737e8f2c5-Screenshot_2026-04-30_at_6.08.13PM.jpg",
+    "source": "https://docs.cloudzero.com/docs/explorer",
+    "id": "cloudzero-explorer-2",
+    "path": "research/flows/assets/cloudzero-explorer-2.png",
+    "bytes": 301042,
+    "type": "image/jpeg",
+    "size": [
+      2846,
+      1156
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-explorer-2.jpg",
+    "importSize": [
+      1800,
+      731
+    ]
+  },
+  {
+    "alt": "Cost table showing Total Cost and Cost of Change columns ranked by Dimension",
+    "url": "https://files.readme.io/695c27d3b0746eec96b8025269df5a6d51b540d12ff387ecd2e4a5ccdda2c481-Screenshot_2026-05-01_at_6.38.56PM.jpg",
+    "source": "https://docs.cloudzero.com/docs/explorer",
+    "id": "cloudzero-explorer-3",
+    "path": "research/flows/assets/cloudzero-explorer-3.png",
+    "bytes": 396810,
+    "type": "image/jpeg",
+    "size": [
+      2418,
+      1170
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-explorer-3.jpg",
+    "importSize": [
+      1800,
+      871
+    ]
+  },
+  {
+    "alt": "Resource detail drawer showing cost over time, tags, properties, and change history",
+    "url": "https://files.readme.io/7b606a819220fa8c6ba360aaa40c44cf1e4ce335802f33e4cfe610c23eecbede-p.png",
+    "source": "https://docs.cloudzero.com/docs/explorer",
+    "id": "cloudzero-explorer-7",
+    "path": "research/flows/assets/cloudzero-explorer-7.png",
+    "bytes": 170355,
+    "type": "image/png",
+    "size": [
+      1088,
+      1476
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-explorer-7.jpg",
+    "importSize": [
+      1327,
+      1800
+    ]
+  },
+  {
+    "alt": "Create Insight form in Explorer showing title, category, description, and cost impact fields",
+    "url": "https://files.readme.io/56367970b3467010f261fd8b82cd9a93bd7e4033948d5e0652c16c6925ab4eb1-Screenshot_2026-05-21_at_5.28.42PM.PNG",
+    "source": "https://docs.cloudzero.com/docs/insights",
+    "id": "cloudzero-insights-4",
+    "path": "research/flows/assets/cloudzero-insights-4.png",
+    "bytes": 67988,
+    "type": "image/png",
+    "size": [
+      620,
+      1078
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-insights-4.jpg",
+    "importSize": [
+      1035,
+      1800
+    ]
+  },
+  {
+    "alt": "Insights tab showing Total Cost Impact, Insight Count visualization, and results table",
+    "url": "https://files.readme.io/9d39dcf64f6caa3577e0bb7d83748828c32d718c55970e58ad647477dbcd2203-Screenshot_2026-05-21_at_5.26.11PM.PNG",
+    "source": "https://docs.cloudzero.com/docs/insights",
+    "id": "cloudzero-insights-2",
+    "path": "research/flows/assets/cloudzero-insights-2.png",
+    "bytes": 339463,
+    "type": "image/png",
+    "size": [
+      2590,
+      1622
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-insights-2.jpg",
+    "importSize": [
+      1800,
+      1127
+    ]
+  },
+  {
+    "alt": "Insight detail panel showing cost chart and details section",
+    "url": "https://files.readme.io/a9f5a53b02e7da44755f4f623ddac8f2d9c998718ece2aeb5397d906f5dcb700-Screenshot_2026-05-21_at_5.27.09PM.PNG",
+    "source": "https://docs.cloudzero.com/docs/insights",
+    "id": "cloudzero-insights-3",
+    "path": "research/flows/assets/cloudzero-insights-3.png",
+    "bytes": 335799,
+    "type": "image/png",
+    "size": [
+      1444,
+      1622
+    ],
+    "importPath": "research\\flows\\imports\\cloudzero-insights-3.jpg",
+    "importSize": [
+      1602,
+      1800
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://cdn.sanity.io/images/jbn81wb5/production/0f672baf06781b1c4fbe66d56b359845288b20a2-1999x784.png?w=1200&q=75&auto=format",
+    "source": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "id": "nops-recs-2",
+    "path": "research/flows/assets/nops-recs-2.png",
+    "bytes": 170610,
+    "type": "image/png",
+    "size": [
+      1200,
+      471
+    ],
+    "importPath": "research\\flows\\imports\\nops-recs-2.jpg",
+    "importSize": [
+      1800,
+      706
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://cdn.sanity.io/images/jbn81wb5/production/4634b17fc13cdc0e7a453c1f4fc9fcfbadf158b5-1999x1284.png?w=1200&q=75&auto=format",
+    "source": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "id": "nops-recs-3",
+    "path": "research/flows/assets/nops-recs-3.png",
+    "bytes": 253822,
+    "type": "image/png",
+    "size": [
+      1200,
+      771
+    ],
+    "importPath": "research\\flows\\imports\\nops-recs-3.jpg",
+    "importSize": [
+      1800,
+      1156
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://cdn.sanity.io/images/jbn81wb5/production/12a7b50271c28f025097cfbaf48d3e831c648979-1999x1284.png?w=1200&q=75&auto=format",
+    "source": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "id": "nops-recs-4",
+    "path": "research/flows/assets/nops-recs-4.png",
+    "bytes": 243907,
+    "type": "image/png",
+    "size": [
+      1200,
+      771
+    ],
+    "importPath": "research\\flows\\imports\\nops-recs-4.jpg",
+    "importSize": [
+      1800,
+      1156
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://cdn.sanity.io/images/jbn81wb5/production/2a3689435efbb51aaaeb82eaa39a0911fb54614a-1024x330.png?w=1200&q=75&auto=format",
+    "source": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "id": "nops-recs-5",
+    "path": "research/flows/assets/nops-recs-5.png",
+    "bytes": 124064,
+    "type": "image/png",
+    "size": [
+      1200,
+      387
+    ],
+    "importPath": "research\\flows\\imports\\nops-recs-5.jpg",
+    "importSize": [
+      1800,
+      580
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://cdn.sanity.io/images/jbn81wb5/production/65f5c0780d90ee1b594405709bdceb9f31452cd2-1024x658.png?w=1200&q=75&auto=format",
+    "source": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "id": "nops-recs-6",
+    "path": "research/flows/assets/nops-recs-6.png",
+    "bytes": 221967,
+    "type": "image/png",
+    "size": [
+      1200,
+      771
+    ],
+    "importPath": "research\\flows\\imports\\nops-recs-6.jpg",
+    "importSize": [
+      1800,
+      1156
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292270-cloud-cost-recommendations-cloud-cost-recommendations-1.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-7",
+    "path": "research/flows/assets/datadog-blog-7.png",
+    "bytes": 65718,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      658
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-7.jpg",
+    "importSize": [
+      1800,
+      846
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292274-cloud-cost-recommendations-cloud-cost-recommendations-2.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-8",
+    "path": "research/flows/assets/datadog-blog-8.png",
+    "bytes": 108150,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      658
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-8.jpg",
+    "importSize": [
+      1800,
+      846
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292283-cloud-cost-recommendations-cloud-cost-recommendations-4.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-10",
+    "path": "research/flows/assets/datadog-blog-10.png",
+    "bytes": 58726,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      654
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-10.jpg",
+    "importSize": [
+      1800,
+      841
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292287-cloud-cost-recommendations-cloud-cost-recommendations-5.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-11",
+    "path": "research/flows/assets/datadog-blog-11.png",
+    "bytes": 78028,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      698
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-11.jpg",
+    "importSize": [
+      1800,
+      897
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292295-cloud-cost-recommendations-cloud-cost-recommendations-6.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-12",
+    "path": "research/flows/assets/datadog-blog-12.png",
+    "bytes": 91305,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      656
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-12.jpg",
+    "importSize": [
+      1800,
+      843
+    ]
+  },
+  {
+    "alt": "Published product screenshot",
+    "url": "https://web-assets.dd-static.net/42588/1776292300-cloud-cost-recommendations-cloud-cost-recommendations-7.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1",
+    "source": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "id": "datadog-blog-13",
+    "path": "research/flows/assets/datadog-blog-13.png",
+    "bytes": 104528,
+    "type": "image/jpeg",
+    "size": [
+      1400,
+      698
+    ],
+    "importPath": "research\\flows\\imports\\datadog-blog-13.jpg",
+    "importSize": [
+      1800,
+      897
+    ]
+  },
+  {
+    "alt": "Figure 3: Cost Anomaly Detection\u00e2\u20ac\u2122s cost monitor page",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_3.jpg",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/",
+    "id": "aws-walkthrough-8",
+    "path": "research/flows/assets/aws-walkthrough-8.png",
+    "bytes": 48218,
+    "type": "image/jpeg",
+    "size": [
+      1125,
+      378
+    ],
+    "importPath": "research\\flows\\imports\\aws-walkthrough-8.jpg",
+    "importSize": [
+      1800,
+      605
+    ]
+  },
+  {
+    "alt": "Figure 4: Cost Anomaly Detection\u00e2\u20ac\u2122s create monitor page",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_4.jpg",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/",
+    "id": "aws-walkthrough-9",
+    "path": "research/flows/assets/aws-walkthrough-9.png",
+    "bytes": 130678,
+    "type": "image/jpeg",
+    "size": [
+      1125,
+      1067
+    ],
+    "importPath": "research\\flows\\imports\\aws-walkthrough-9.jpg",
+    "importSize": [
+      1800,
+      1707
+    ]
+  },
+  {
+    "alt": "Figure 5: Landing page to modify or create alert subscriptions for Cost Anomaly Detection",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_5.jpg",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/",
+    "id": "aws-walkthrough-10",
+    "path": "research/flows/assets/aws-walkthrough-10.png",
+    "bytes": 43070,
+    "type": "image/jpeg",
+    "size": [
+      1125,
+      261
+    ],
+    "importPath": "research\\flows\\imports\\aws-walkthrough-10.jpg",
+    "importSize": [
+      1800,
+      418
+    ]
+  },
+  {
+    "alt": "Figure 6: Edit alert subscription",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_6.jpg",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/",
+    "id": "aws-walkthrough-11",
+    "path": "research/flows/assets/aws-walkthrough-11.png",
+    "bytes": 103026,
+    "type": "image/jpeg",
+    "size": [
+      943,
+      985
+    ],
+    "importPath": "research\\flows\\imports\\aws-walkthrough-11.jpg",
+    "importSize": [
+      1723,
+      1800
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/06/08/image-51-1024x302.png",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/introducing-ai-powered-cost-investigations-for-cost-anomalies/",
+    "id": "aws-investigate-6",
+    "path": "research/flows/assets/aws-investigate-6.png",
+    "bytes": 67022,
+    "type": "image/png",
+    "size": [
+      1024,
+      302
+    ],
+    "importPath": "research\\flows\\imports\\aws-investigate-6.jpg",
+    "importSize": [
+      1800,
+      531
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/06/07/image-50-1024x909.png",
+    "source": "https://aws.amazon.com/blogs/aws-cloud-financial-management/introducing-ai-powered-cost-investigations-for-cost-anomalies/",
+    "id": "aws-investigate-7",
+    "path": "research/flows/assets/aws-investigate-7.png",
+    "bytes": 282603,
+    "type": "image/png",
+    "size": [
+      1024,
+      909
+    ],
+    "importPath": "research\\flows\\imports\\aws-investigate-7.jpg",
+    "importSize": [
+      1800,
+      1598
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/invoice-report.png",
+    "source": "https://help.cloudhealthtech.com/partners/reporting",
+    "id": "cloudhealth-partner-0",
+    "path": "research/flows/assets/cloudhealth-partner-0.png",
+    "bytes": 64378,
+    "type": "image/png",
+    "size": [
+      1238,
+      374
+    ],
+    "importPath": "research\\flows\\imports\\cloudhealth-partner-0.jpg",
+    "importSize": [
+      1800,
+      544
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/partner-cost-history-report.png",
+    "source": "https://help.cloudhealthtech.com/partners/reporting",
+    "id": "cloudhealth-partner-1",
+    "path": "research/flows/assets/cloudhealth-partner-1.png",
+    "bytes": 75453,
+    "type": "image/png",
+    "size": [
+      1226,
+      705
+    ],
+    "importPath": "research\\flows\\imports\\cloudhealth-partner-1.jpg",
+    "importSize": [
+      1800,
+      1035
+    ]
+  },
+  {
+    "alt": "",
+    "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/partner-margin-history-report.png",
+    "source": "https://help.cloudhealthtech.com/partners/reporting",
+    "id": "cloudhealth-partner-2",
+    "path": "research/flows/assets/cloudhealth-partner-2.png",
+    "bytes": 71158,
+    "type": "image/png",
+    "size": [
+      1213,
+      689
+    ],
+    "importPath": "research\\flows\\imports\\cloudhealth-partner-2.jpg",
+    "importSize": [
+      1800,
+      1022
+    ]
+  },
+  {
+    "id": "flexera-status-diagram",
+    "alt": "Recommendation status change flowchart (vendor diagram, not a UI screenshot)",
+    "source": "https://docs.flexera.com/flexera-one/cloud/using-cloud-cost-optimization/recommendation-lifecycle/access-recommendations",
+    "url": "https://docs.flexera.com/flexera-one/assets/images/ccoflowchart-fc9910e0719a1e042ceff9e6e1265f88.png",
+    "path": "research/flows/assets/flexera-status-diagram.png",
+    "bytes": 45844,
+    "type": "image/png",
+    "size": [
+      1901,
+      851
+    ],
+    "importPath": "research\\flows\\imports\\flexera-status-diagram.jpg",
+    "importSize": [
+      1800,
+      806
+    ]
+  }
+]

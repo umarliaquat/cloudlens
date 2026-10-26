@@ -1,0 +1,1036 @@
+[
+  {
+    "id": "vantage-report",
+    "url": "https://docs.vantage.sh/cost_reports/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "light logo",
+        "url": "https://mintcdn.com/vantage-39/dQz82CvBD_D4tRVs/logo/light.svg?fit=max&auto=format&n=dQz82CvBD_D4tRVs&q=85&s=3eb2e2468e61bd6e30b8d750e93a32da"
+      },
+      {
+        "alt": "dark logo",
+        "url": "https://mintcdn.com/vantage-39/dQz82CvBD_D4tRVs/logo/dark.svg?fit=max&auto=format&n=dQz82CvBD_D4tRVs&q=85&s=70e86138443e9c2caf19ae568b3014e3"
+      },
+      {
+        "alt": "Selecting matching criteria for a filter in a Cost Report",
+        "url": "https://assets.vantage.sh/docs/resource-filter-options.png"
+      },
+      {
+        "alt": "Flexible match operator",
+        "url": "https://assets.vantage.sh/docs/flex-match.png"
+      },
+      {
+        "alt": "Cost allocation of 50% is added to a filter set on a Kubernetes Cost Report",
+        "url": "https://assets.vantage.sh/docs/showback-cost-allocation.png"
+      },
+      {
+        "alt": "Network Costs option on a Cost Report",
+        "url": "https://assets.vantage.sh/docs/nfr-cost-report.png"
+      },
+      {
+        "alt": "A Cost Report that is enabled with Multi-dimensional Grouping",
+        "url": "https://assets.vantage.sh/docs/cost-report-grouping.png"
+      },
+      {
+        "alt": "Displaying additional costs using the Other Costs dropdown menu on a Cost Report",
+        "url": "https://assets.vantage.sh/docs/other-costs.png"
+      },
+      {
+        "alt": "Drilling down by parent nested tag",
+        "url": "https://assets.vantage.sh/docs/nested-drilldown-1.png"
+      },
+      {
+        "alt": "Drilling down by subtag",
+        "url": "https://assets.vantage.sh/docs/nested-drilldown-2.png"
+      },
+      {
+        "alt": "A Cost Report grouped to show a subcategory link with the corresponding cur.vantage.sh page",
+        "url": "https://assets.vantage.sh/docs/cur-cost-report.png"
+      },
+      {
+        "alt": "A square around the top right of the chart highlights where you can toggle different visualization options, like line charts and area charts",
+        "url": "https://assets.vantage.sh/docs/cost-report-visualizations-1.png"
+      },
+      {
+        "alt": "With the Y-Axis set to Count, filtering to EC2 and grouping by Resource shows how many distinct instances were running each month",
+        "url": "https://assets.vantage.sh/blog/count-display-cost-reports/count-display-cost-reports.png"
+      },
+      {
+        "alt": "Comparative bar chart showing current vs previous period costs by region",
+        "url": "https://assets.vantage.sh/docs/comparative-cost-reporting.png"
+      },
+      {
+        "alt": "Comparative View",
+        "url": "https://assets.vantage.sh/docs/by-date-view.png"
+      },
+      {
+        "alt": "Example PDF export of a Cost Report",
+        "url": "https://assets.vantage.sh/docs/pdf-export.png"
+      },
+      {
+        "alt": "Example CSV export of a Cost Report",
+        "url": "https://assets.vantage.sh/docs/custom-csv-export.png"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://docs.vantage.sh/cost_reports/#anomalies-forecasts-and-annotations",
+        "text": "Anomalies, Forecasts, and Annotations"
+      },
+      {
+        "url": "https://docs.vantage.sh/cost_reports/#forecasts-and-anomalies",
+        "text": "Forecasts and Anomalies"
+      },
+      {
+        "url": "https://docs.vantage.sh/cost_anomaly_alerts",
+        "text": "anomaly detection"
+      }
+    ]
+  },
+  {
+    "id": "vantage-anomalies",
+    "url": "https://docs.vantage.sh/anomaly_detection/",
+    "status": 404,
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "doit-detail",
+    "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+    "status": 200,
+    "images": [
+      {
+        "alt": "DoiT",
+        "url": "https://help.doit.com/logo-hero-square.svg"
+      },
+      {
+        "alt": "The details page of a cost anomaly",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-page-f381e791710b5d1be0b41e29ee62cef5.png"
+      },
+      {
+        "alt": "The details page of a cost anomaly",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-real-time-5560f7e23c968234df273b569e1ad3c5.png"
+      },
+      {
+        "alt": "The anomaly header",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-header-dcd27014bfca890d4cd9c4640c3b7ae6.png"
+      },
+      {
+        "alt": "The supporting details",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-key-metrics-63003152cf2478d90383eb826694809d.png"
+      },
+      {
+        "alt": "The cost anomaly contributors",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-contributory-resource-2d673a041cb584c0caaee7f64ad677e1.png"
+      },
+      {
+        "alt": "Investigative report of a cost anomaly",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-in-report-ee49ce06a6c2c197b06104d8244f81bb.png"
+      },
+      {
+        "alt": "Navigate to Cloud Diagrams from a cost anomaly",
+        "url": "https://help.doit.com/assets/images/open-in-cloud-diagrams-22dfab58da35caf4843eb89a8384f4f7.png"
+      },
+      {
+        "alt": "The AI analysis overview",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-details-ai-analysis-1abbebe785fa8d0c99e14efb68b7b9e1.png"
+      },
+      {
+        "alt": "The AI analysis overview deeper insights",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-deeper-insights-9a3c33d2b987061ff6e239573e919d72.png"
+      },
+      {
+        "alt": "Annotation created from a cost anomaly",
+        "url": "https://help.doit.com/assets/images/console-annotation-from-anomaly-f0744ea661d496be09924c54be1d4be1.png"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies",
+        "text": "Cost anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/real-time-anomaly-detection",
+        "text": "Real-time anomaly detection"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/access-anomalies",
+        "text": "Access anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+        "text": "View anomaly details"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/manage-anomaly-notifications",
+        "text": "Manage anomaly notifications"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+        "text": "Review and classify anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/add-anomalies-to-dashboard",
+        "text": "Add cost anomalies widget to dashboard"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+        "text": "Review and classify anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/access-anomalies#anomaly-properties",
+        "text": "anomaly properties"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+        "text": "Review and classify anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/access-anomalies",
+        "text": "PreviousAccess anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/manage-anomaly-notifications",
+        "text": "NextManage anomaly notifications"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies#view-a-cost-anomaly",
+        "text": "View a cost anomaly"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies#cost-anomaly-chart",
+        "text": "Cost anomaly chart"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies#attribute-usage",
+        "text": "Attribute usage anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies#linked-anomalies",
+        "text": "Linked anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies#review-and-classify-anomaly",
+        "text": "Review and classify anomaly"
+      }
+    ]
+  },
+  {
+    "id": "doit-review",
+    "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+    "status": 200,
+    "images": [
+      {
+        "alt": "DoiT",
+        "url": "https://help.doit.com/logo-hero-square.svg"
+      },
+      {
+        "alt": "Review status",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-review-status-cac49372390e530d95cdd1c21443cf68.png"
+      },
+      {
+        "alt": "Complete the status change",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-acknowledge-a7eb815a16144fd104011208a3416063.png"
+      },
+      {
+        "alt": "Update the review status of a cost anomaly in Slack",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-acknowledge-slack-d03f98d830d1091cd0ac42f7dc606383.png"
+      },
+      {
+        "alt": "Comments are recorded in the comment history",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-comment-history-710755eb72159f47bd8ac6c3dd76efe3.png"
+      },
+      {
+        "alt": "Status changes are recorded in the activity history",
+        "url": "https://help.doit.com/assets/images/console-cost-anomaly-activity-history-8a0755c38767f7a7f98b1e8faf2c6593.png"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies",
+        "text": "Cost anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/real-time-anomaly-detection",
+        "text": "Real-time anomaly detection"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/access-anomalies",
+        "text": "Access anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/investigate-anomalies",
+        "text": "View anomaly details"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/manage-anomaly-notifications",
+        "text": "Manage anomaly notifications"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies",
+        "text": "Review and classify anomalies"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/add-anomalies-to-dashboard",
+        "text": "Add cost anomalies widget to dashboard"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/manage-anomaly-notifications",
+        "text": "receive anomaly notifications via Slack"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies#set-the-review-status",
+        "text": "set the review status"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/manage-anomaly-notifications",
+        "text": "PreviousManage anomaly notifications"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/add-anomalies-to-dashboard",
+        "text": "NextAdd cost anomalies widget to dashboard"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies#review-status",
+        "text": "Review status"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies#set-the-review-status",
+        "text": "Set the review status"
+      },
+      {
+        "url": "https://help.doit.com/docs/governance/cloud-anomalies/review-and-classify-anomalies#update-the-review-status",
+        "text": "Update the review status"
+      }
+    ]
+  },
+  {
+    "id": "cloudzero-explorer",
+    "url": "https://docs.cloudzero.com/docs/explorer",
+    "status": 200,
+    "images": [
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/e7c5ff8ece6436cb3b1d3fc0648afca17d366e8b4b177a74f3ee5dcfb5eaa31c-cloudzero-logo-color-rgb.png"
+      },
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/b3b79e923ab812551ecf0bcac89f733890d867946d9c66cd17b82d3e09a1b727-cloudzero-logo-inverted-rgb.png"
+      },
+      {
+        "alt": "Explorer showing daily costs grouped by Business Unit",
+        "url": "https://files.readme.io/41de34a4142b635a09157a05722bd558200a54d4d042e32f70f8b3c737e8f2c5-Screenshot_2026-04-30_at_6.08.13PM.jpg"
+      },
+      {
+        "alt": "Cost table showing Total Cost and Cost of Change columns ranked by Dimension",
+        "url": "https://files.readme.io/695c27d3b0746eec96b8025269df5a6d51b540d12ff387ecd2e4a5ccdda2c481-Screenshot_2026-05-01_at_6.38.56PM.jpg"
+      },
+      {
+        "alt": "Group By dropdown showing Dimension categories",
+        "url": "https://files.readme.io/4bdaf61bb1add570f0390d8f42fd72163435d6cfe7f648df55f4b546ac76f292-Screenshot_2026-04-30_at_6.22.26PM.jpg"
+      },
+      {
+        "alt": "Cost Type selector showing available cost types",
+        "url": "https://files.readme.io/061387630ff7b4f4ab59a6fa030c948aa2524346e30f467ca579539bc70d6faa-Screenshot_2026-04-30_at_6.21.08PM.jpg"
+      },
+      {
+        "alt": "Views menu and Additional Features panel in Explorer",
+        "url": "https://files.readme.io/6c484ac5f3e6fa0c55b935a3becefb176dd409fd6546e8740e36af5c6ac14a42-Screenshot_2026-04-30_at_6.30.46PM.jpg"
+      },
+      {
+        "alt": "Resource detail drawer showing cost over time, tags, properties, and change history",
+        "url": "https://files.readme.io/7b606a819220fa8c6ba360aaa40c44cf1e4ce335802f33e4cfe610c23eecbede-p.png"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://docs.cloudzero.com/docs/engineering-activity-correlation",
+        "text": "Anomalies in Explorer"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights",
+        "text": "Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/anomaly-detection",
+        "text": "Anomaly Detection"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/configure-notifications",
+        "text": "Configure Anomaly Notifications"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#insight-fields",
+        "text": "Insight fields"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/engineering-activity-correlation",
+        "text": "anomalies and engineering events"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/explorer#act-on-what-you-find-with-insights",
+        "text": "Act on what you find with Insights"
+      }
+    ]
+  },
+  {
+    "id": "cloudzero-insights",
+    "url": "https://docs.cloudzero.com/docs/insights",
+    "status": 200,
+    "images": [
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/e7c5ff8ece6436cb3b1d3fc0648afca17d366e8b4b177a74f3ee5dcfb5eaa31c-cloudzero-logo-color-rgb.png"
+      },
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/b3b79e923ab812551ecf0bcac89f733890d867946d9c66cd17b82d3e09a1b727-cloudzero-logo-inverted-rgb.png"
+      },
+      {
+        "alt": "Insights tab showing Total Cost Impact, Insight Count visualization, and results table",
+        "url": "https://files.readme.io/9d39dcf64f6caa3577e0bb7d83748828c32d718c55970e58ad647477dbcd2203-Screenshot_2026-05-21_at_5.26.11PM.PNG"
+      },
+      {
+        "alt": "Insight detail panel showing cost chart and details section",
+        "url": "https://files.readme.io/a9f5a53b02e7da44755f4f623ddac8f2d9c998718ece2aeb5397d906f5dcb700-Screenshot_2026-05-21_at_5.27.09PM.PNG"
+      },
+      {
+        "alt": "Create Insight form in Explorer showing title, category, description, and cost impact fields",
+        "url": "https://files.readme.io/56367970b3467010f261fd8b82cd9a93bd7e4033948d5e0652c16c6925ab4eb1-Screenshot_2026-05-21_at_5.28.42PM.PNG"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://docs.cloudzero.com/docs/engineering-activity-correlation",
+        "text": "Anomalies in Explorer"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights",
+        "text": "Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/anomaly-detection",
+        "text": "Anomaly Detection"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/configure-notifications",
+        "text": "Configure Anomaly Notifications"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#insight-fields",
+        "text": "Insight fields"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/ai-mcp-server#insights",
+        "text": "Insights tools"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#what-the-insights-tab-shows",
+        "text": "What the Insights tab shows"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#find-insights",
+        "text": "Find Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#view-insight-details",
+        "text": "View Insight details"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#create-an-insight",
+        "text": "Create an Insight"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#insight-fields",
+        "text": "Insight fields"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#manage-insights",
+        "text": "Manage Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights#insight-statuses",
+        "text": "Insight statuses"
+      }
+    ]
+  },
+  {
+    "id": "cloudzero-optimize",
+    "url": "https://docs.cloudzero.com/docs/optimize",
+    "status": 200,
+    "images": [
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/e7c5ff8ece6436cb3b1d3fc0648afca17d366e8b4b177a74f3ee5dcfb5eaa31c-cloudzero-logo-color-rgb.png"
+      },
+      {
+        "alt": "CloudZero Documentation",
+        "url": "https://files.readme.io/b3b79e923ab812551ecf0bcac89f733890d867946d9c66cd17b82d3e09a1b727-cloudzero-logo-inverted-rgb.png"
+      },
+      {
+        "alt": "Optimize page showing total spend, potential savings, and open recommendations",
+        "url": "https://files.readme.io/4a74b40dee4a59937278dc46c74e75743ac2507598ae6fb8f6377ffe19ddc169-Screenshot_2026-05-21_at_5.15.44PM.PNG"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://docs.cloudzero.com/docs/engineering-activity-correlation",
+        "text": "Anomalies in Explorer"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights",
+        "text": "Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/anomaly-detection",
+        "text": "Anomaly Detection"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/configure-notifications",
+        "text": "Configure Anomaly Notifications"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/insights",
+        "text": "Insights"
+      },
+      {
+        "url": "https://docs.cloudzero.com/docs/anomaly-detection",
+        "text": "Anomaly Detection"
+      }
+    ]
+  },
+  {
+    "id": "datadog-recs",
+    "url": "https://docs.datadoghq.com/cloud_cost_management/recommendations/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "",
+        "url": "https://docs.dd-static.net/img/dd_logo_n_70x75.png?ch=Width,DPR&fit=max&auto=format&w=70&h=75"
+      },
+      {
+        "alt": "",
+        "url": "https://docs.dd-static.net/img/dd-logo-n-200.png?ch=Width,DPR&fit=max&auto=format&h=14&auto=format&w=807"
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "datadog-custom",
+    "url": "https://docs.datadoghq.com/cloud_cost_management/recommendations/custom_recommendations/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "",
+        "url": "https://docs.dd-static.net/img/dd_logo_n_70x75.png?ch=Width,DPR&fit=max&auto=format&w=70&h=75"
+      },
+      {
+        "alt": "",
+        "url": "https://docs.dd-static.net/img/dd-logo-n-200.png?ch=Width,DPR&fit=max&auto=format&h=14&auto=format&w=807"
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "nops-recs",
+    "url": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/1aabda9cc0980f4f3561a57ab07dc9958836595c-169x38.svg?q=75&auto=format"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/a32489174d28771664b0e4f0f95e1749833072e4-2560x388.png"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/0f672baf06781b1c4fbe66d56b359845288b20a2-1999x784.png?w=1200&q=75&auto=format"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/4634b17fc13cdc0e7a453c1f4fc9fcfbadf158b5-1999x1284.png?w=1200&q=75&auto=format"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/12a7b50271c28f025097cfbaf48d3e831c648979-1999x1284.png?w=1200&q=75&auto=format"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/2a3689435efbb51aaaeb82eaa39a0911fb54614a-1024x330.png?w=1200&q=75&auto=format"
+      },
+      {
+        "alt": "",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/65f5c0780d90ee1b594405709bdceb9f31452cd2-1024x658.png?w=1200&q=75&auto=format"
+      },
+      {
+        "alt": "Demo",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/e1cfb1292664b6481fd6206561d445f981a5bee8-538x538.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/2ec67c9c86f977fa7fe161a4247d639a44880e3a-96x96.png?w=96&q=75&auto=format"
+      },
+      {
+        "alt": "Save up to 55% with Commitment Management",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/73a93f78b15d1240f9feb6b1f7ac0327e8275c82-336x404.png"
+      },
+      {
+        "alt": "Introducing Cursor Integration in nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/e4d1f25da1e605b711005d36e5d4878b2405c27e-1672x941.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "Rick Haggart",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/89cd24dae735716c47af4d9b500f30325f58ed49-512x512.jpg"
+      },
+      {
+        "alt": "Introducing Claude.ai (Enterprise) Integration in nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/da484db6993bb2fca5e1f793b4f82f9dcbeba9f3-1672x941.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "New AI Anomaly Detection Experience with GitHub Context",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/0e1eeab82ed802552bc2ded8adb618b9fb1ba32f-1672x941.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "Introducing Cloudflare Integration in nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/7e6ac7344af7af58fa28dd2666cb2627551ef845-1586x992.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "Jordan Stein",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/f28fad2b15043f8cad3c1e21adb63dc9ce051de6-96x96.png"
+      },
+      {
+        "alt": "Introducing Clara Agent in Slack",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/ed80d8ca14e2841a592d30e2068a97892bf39cf9-1536x1024.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "Pranay Dinesh",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/1ec9b5872eb39d076b9a69d6404a7941b2ba1b83-300x300.png"
+      },
+      {
+        "alt": "Introducing the nOps MCP &amp; Skills",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/98a3aa76fd6a998f7cf80161a102c39758c63fcf-1536x1024.png?w=800&q=75&auto=format"
+      },
+      {
+        "alt": "nOps",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/13cd60c2b92552bef9efaedafc468da6f80a1ad1-162x37.svg?q=75&auto=format"
+      },
+      {
+        "alt": "AWS Advanced Technology Partner",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/ca31465ebcc4600c30a5617e6275b85d10953206-253x347.png?q=75&auto=format"
+      },
+      {
+        "alt": "FinOps Foundation Member",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/302fcf00fa6033664f5705f71217a69b9fa49356-299x333.png?q=75&auto=format"
+      },
+      {
+        "alt": "FinOps Premier Member",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/9cd16219f181ec9078c8a97b3c64783ed21f7048-263x127.svg?q=75&auto=format"
+      },
+      {
+        "alt": "SOC 2 Type 2",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/7d3abb2dc2f6906c6c30d76d56a8e75e4387ce0a-192x245.webp?q=75&auto=format"
+      },
+      {
+        "alt": "Best Est. ROI Mid Market",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/cbf9a74f47eb98fde82faa6fc40d68ff4cc532a8-92x106.svg?q=75&auto=format"
+      },
+      {
+        "alt": "High Performer",
+        "url": "https://cdn.sanity.io/images/jbn81wb5/production/f624d909054daeacf9b9752ac25bf8fc8ad83ecf-92x106.svg?q=75&auto=format"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://www.nops.io/blog/new-ai-powered-inform-cost-savings-recommendations/#filterthroughthenoiseofautomatedrecommendationsgetinsightfulrecommendationseasywinsandpersonalizedhow-tostotackleyourrecommendationswithease",
+        "text": "Filter through the noise of automated recommendations. Get insightful recommendations, easy wins, and personalized how-to’s to tackle your recommendations with ease"
+      }
+    ]
+  },
+  {
+    "id": "cloudhealth-partner",
+    "url": "https://help.cloudhealthtech.com/partners/reporting",
+    "status": 200,
+    "images": [
+      {
+        "alt": "",
+        "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/invoice-report.png"
+      },
+      {
+        "alt": "",
+        "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/partner-cost-history-report.png"
+      },
+      {
+        "alt": "",
+        "url": "https://help.cloudhealthtech.com/assets/images/partner/aws/partner-margin-history-report.png"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://help.cloudhealthtech.com/partners/reporting#use-perspectives-to-gain-insight-into-your-environments",
+        "text": "Use Perspectives to Gain Insight into Your Environments"
+      }
+    ]
+  },
+  {
+    "id": "flexera-lifecycle",
+    "url": "https://docs.flexera.com/flexera-one/cloud/using-cloud-cost-optimization/recommendation-lifecycle",
+    "status": 403,
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "aws-anomalies",
+    "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad-view-anomalies.html",
+    "status": 200,
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "aws-investigate",
+    "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/introducing-ai-powered-cost-investigations-for-cost-anomalies/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png"
+      },
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/building-30-day-challenge.fbb950fa275e28193955202b94c04d0125135ecc.jpg"
+      },
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/start-here.51d7e318c4dec6bc220a696add0abb2d8388f280.png"
+      },
+      {
+        "alt": "an abstract illustration",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_innovation_8_1200.07a6484f8eaa3100138cf8b6dce14f1db024db32.jpg"
+      },
+      {
+        "alt": "alt",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_culture_2_1200.77dd122bde9af49ea0c09cdc009c193866f62ad7.jpg"
+      },
+      {
+        "alt": "alt",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_culture_11_1200.29c48d4e742090396f61d0c5d5eec4ea8d714817.jpg"
+      },
+      {
+        "alt": "",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/06/08/image-51-1024x302.png"
+      },
+      {
+        "alt": "",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/06/07/image-50-1024x909.png"
+      },
+      {
+        "alt": "Fredrik Tunvall",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2024/11/22/Fredrik-Tunvall.jpeg"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://aws.amazon.com/quick/?nc2=h_prod_fs_q",
+        "text": "Amazon Quick\n                          AI-powered assistant for work with research, business insights, automation, and no-code app building"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html",
+        "text": "AWS Cost Anomaly Detection"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html",
+        "text": "AWS Cost Anomaly Detection documentation"
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/tag/aws-cost-anomaly-detection/",
+        "text": "AWS Cost Anomaly Detection"
+      }
+    ]
+  },
+  {
+    "id": "aws-walkthrough",
+    "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png"
+      },
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/building-30-day-challenge.fbb950fa275e28193955202b94c04d0125135ecc.jpg"
+      },
+      {
+        "alt": "An abstract image",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/start-here.51d7e318c4dec6bc220a696add0abb2d8388f280.png"
+      },
+      {
+        "alt": "an abstract illustration",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_innovation_8_1200.07a6484f8eaa3100138cf8b6dce14f1db024db32.jpg"
+      },
+      {
+        "alt": "alt",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_culture_2_1200.77dd122bde9af49ea0c09cdc009c193866f62ad7.jpg"
+      },
+      {
+        "alt": "alt",
+        "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/global-nav/aws-library_illustration_culture_11_1200.29c48d4e742090396f61d0c5d5eec4ea8d714817.jpg"
+      },
+      {
+        "alt": "Figure 1: Daily anomaly summary email table, to learn more about the terms used, go to the Cost Anomaly Detection documentation.",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_1-1024x373.png"
+      },
+      {
+        "alt": "Figure 2: Cost Anomaly Detection’s Anomaly details page",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_2.jpg"
+      },
+      {
+        "alt": "Figure 3: Cost Anomaly Detection’s cost monitor page",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_3.jpg"
+      },
+      {
+        "alt": "Figure 4: Cost Anomaly Detection’s create monitor page",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_4.jpg"
+      },
+      {
+        "alt": "Figure 5: Landing page to modify or create alert subscriptions for Cost Anomaly Detection",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_5.jpg"
+      },
+      {
+        "alt": "Figure 6: Edit alert subscription",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_6.jpg"
+      },
+      {
+        "alt": "Figure 7: “Delete monitor” button",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/03/24/CAD-for-CE_7.jpg"
+      },
+      {
+        "alt": "Bowen Wang",
+        "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2023/10/23/2023ProfileBW-small.jpg"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://aws.amazon.com/quick/?nc2=h_prod_fs_q",
+        "text": "Amazon Quick\n                          AI-powered assistant for work with research, business insights, automation, and no-code app building"
+      },
+      {
+        "url": "https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection/",
+        "text": "AWS Cost Anomaly Detection"
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/new-aws-cost-explorer-users-can-now-automatically-detect-cost-anomalies/#Understanding-detected-anomalies",
+        "text": "Understanding detected anomalies"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html",
+        "text": "Cost Anomaly Detection documentation"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateAnomalyMonitor.html",
+        "text": "CreateAnomalyMonitor"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateAnomalySubscription.html",
+        "text": "CreateAnomalySubscription"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_UpdateAnomalySubscription.html",
+        "text": "UpdateAnomalySubscription"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetAnomalyMonitors.html",
+        "text": "GetAnomalyMonitors"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DeleteAnomalyMonitor.html",
+        "text": "DeleteAnomalyMonitor API"
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/tag/aws-cost-anomaly-detection/",
+        "text": "AWS Cost Anomaly Detection"
+      }
+    ]
+  },
+  {
+    "id": "datadog-blog",
+    "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/",
+    "status": 200,
+    "images": [
+      {
+        "alt": "DataDog",
+        "url": "https://corp.dd-static.net/img/dd_logo_n_70x75.png?ch=Width,DPR&fit=max&auto=format&w=70&h=75"
+      },
+      {
+        "alt": "DataDog",
+        "url": "https://corp.dd-static.net/img/dd-logo-n-200.png?ch=Width,DPR&fit=max&auto=format&h=14&auto=format&w=807"
+      },
+      {
+        "alt": "Datadog Logo",
+        "url": "https://corp.dd-static.net/img/datadog_rbg_n_2x.png?format=png"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292265-cloud-cost-recommendations-cloud-cost-recommendations-hero.png?format=auto&fit=crop&quality=75&disable=upscale&width=1400&height=711&dpr=1"
+      },
+      {
+        "alt": "Candace Shamieh",
+        "url": "https://web-assets.dd-static.net/42588/1776291729-candaceshamieh.jpg?format=auto&fit=bounds&quality=75&disable=upscale&width=48&dpr=1"
+      },
+      {
+        "alt": "Patrick Krieger",
+        "url": "https://web-assets.dd-static.net/42588/1776291495-patrick-krieger.jpeg?format=auto&fit=bounds&quality=75&disable=upscale&width=48&dpr=1"
+      },
+      {
+        "alt": "Colby Hanley",
+        "url": "https://web-assets.dd-static.net/42588/1776292260-colby-hanley.png?format=auto&fit=bounds&quality=75&disable=upscale&width=48&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292270-cloud-cost-recommendations-cloud-cost-recommendations-1.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292274-cloud-cost-recommendations-cloud-cost-recommendations-2.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292279-cloud-cost-recommendations-cloud-cost-recommendations-3.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292283-cloud-cost-recommendations-cloud-cost-recommendations-4.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292287-cloud-cost-recommendations-cloud-cost-recommendations-5.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292295-cloud-cost-recommendations-cloud-cost-recommendations-6.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292300-cloud-cost-recommendations-cloud-cost-recommendations-7.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1400&dpr=1"
+      },
+      {
+        "alt": "Datadog Platform Datasheet",
+        "url": "https://web-assets.dd-static.net/42588/1777497550-thumbnail-datadog-platform-datasheet_updated.png?format=auto&fit=bounds&quality=90&disable=upscale&width=276&dpr=1"
+      },
+      {
+        "alt": "Datadog logo",
+        "url": "https://corp.dd-static.net/img/dd_logos/png_logos/horizontal/dd_logo_h_white.png?format=png"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292265-cloud-cost-recommendations-cloud-cost-recommendations-hero.png?format=auto&fit=crop&quality=75&disable=upscale&width=677&height=344&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292265-cloud-cost-recommendations-cloud-cost-recommendations-hero.png?format=auto&fit=crop&quality=75&disable=upscale&width=934&height=474&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292270-cloud-cost-recommendations-cloud-cost-recommendations-1.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292270-cloud-cost-recommendations-cloud-cost-recommendations-1.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292274-cloud-cost-recommendations-cloud-cost-recommendations-2.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292274-cloud-cost-recommendations-cloud-cost-recommendations-2.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292279-cloud-cost-recommendations-cloud-cost-recommendations-3.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292279-cloud-cost-recommendations-cloud-cost-recommendations-3.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292283-cloud-cost-recommendations-cloud-cost-recommendations-4.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292283-cloud-cost-recommendations-cloud-cost-recommendations-4.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292287-cloud-cost-recommendations-cloud-cost-recommendations-5.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292287-cloud-cost-recommendations-cloud-cost-recommendations-5.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292295-cloud-cost-recommendations-cloud-cost-recommendations-6.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292295-cloud-cost-recommendations-cloud-cost-recommendations-6.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292300-cloud-cost-recommendations-cloud-cost-recommendations-7.png?format=auto&fit=bounds&quality=75&disable=upscale&width=767&dpr=1"
+      },
+      {
+        "alt": "Published product screenshot",
+        "url": "https://web-assets.dd-static.net/42588/1776292300-cloud-cost-recommendations-cloud-cost-recommendations-7.png?format=auto&fit=bounds&quality=75&disable=upscale&width=1024&dpr=1"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#find-cost-optimization-opportunities-specific-to-your-multi-cloud-environment",
+        "text": "Actionable insights that enable you to optimize costs for your resources running in AWS, Azure, and Google Cloud"
+      },
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#act-on-insights-without-switching-tools",
+        "text": "Built-in workflows that help you implement cost-saving insights directly from Datadog’s UI"
+      },
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#act-on-insights-without-switching-tools",
+        "text": "Act on insights without switching tools"
+      },
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#gain-insight-into-cloud-spend-in-a-multi-cloud-environment",
+        "text": "Gain insight into cloud spend in a multi-cloud environment"
+      },
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#act-on-insights-without-switching-tools",
+        "text": "&]:border-purple-600 active:border-purple-600 [.active>&]:text-purple-600 group-has-[.active]:text-purple-600 group-has-[.active]:border-purple-600 active:text-purple-800 [.active>&]:font-bold group-has-[.active]:font-bold group-has-[.active]:hover:border-purple-700 group-has-[.active]:hover:text-purple-700 [.active]:hover:border-purple-700 [.active>&]:hover:text-purple-700 [.active]:active:border-purple-800 [.active>&]:active:text-purple-800\">\n        Act on insights without switching tools"
+      },
+      {
+        "url": "https://www.datadoghq.com/blog/cloud-cost-recommendations/#gain-insight-into-cloud-spend-in-a-multi-cloud-environment",
+        "text": "&]:border-purple-600 active:border-purple-600 [.active>&]:text-purple-600 group-has-[.active]:text-purple-600 group-has-[.active]:border-purple-600 active:text-purple-800 [.active>&]:font-bold group-has-[.active]:font-bold group-has-[.active]:hover:border-purple-700 group-has-[.active]:hover:text-purple-700 [.active]:hover:border-purple-700 [.active>&]:hover:text-purple-700 [.active]:active:border-purple-800 [.active>&]:active:text-purple-800\">\n        Gain insight into cloud spend in a multi-cloud environment"
+      },
+      {
+        "url": "https://www.datadoghq.com/product-preview/",
+        "text": "Product Preview Program"
+      }
+    ]
+  },
+  {
+    "id": "flexera-access",
+    "url": "https://docs.flexera.com/flexera-one/cloud/using-cloud-cost-optimization/recommendation-lifecycle/access-recommendations",
+    "status": 403,
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "flexera-status",
+    "url": "https://docs.flexera.com/flexera-one/cloud/using-cloud-cost-optimization/recommendation-lifecycle/manage-recommendation-statuses",
+    "status": 403,
+    "images": [],
+    "links": []
+  }
+]
