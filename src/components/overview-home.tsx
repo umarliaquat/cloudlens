@@ -16,6 +16,7 @@ import {
 import type { Overview, Period, Recommendation, Role } from "@/lib/domain";
 import { money, percent, shortDate } from "@/lib/format";
 import { workspaceHref } from "@/lib/workspace";
+import { publicAsset } from "@/lib/paths";
 import {
   homepageModel,
   driverEvidence,
@@ -37,7 +38,7 @@ function AwsIcon({ service }: { service: string }) {
   return serviceIcons[service] ? (
     <img
       className="home-aws-icon"
-      src={`/aws/${serviceIcons[service]}.svg`}
+      src={publicAsset(`/aws/${serviceIcons[service]}.svg`)}
       alt=""
       aria-hidden="true"
       width={28}

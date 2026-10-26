@@ -75,7 +75,7 @@ The application source is in `src/app`, shared components in `src/components`, d
 
 ## Hosting
 
-This is a Next.js application with server-rendered routes and a Route Handler. Deploy it to a host supporting Next.js server execution, such as Vercel or a Node.js server. GitHub stores the source code; GitHub Pages does not run this application unchanged.
+The standard Next.js build has server-rendered routes and a Route Handler, suitable for Vercel or a Node.js server. A separate GitHub Pages adapter creates a browser-only version of the simulated demo without changing the local server application.
 
 ```sh
 npm ci
@@ -84,3 +84,14 @@ npm start
 ```
 
 No AWS credentials, API keys or environment variables are needed for the simulated demo. Browser-local changes are device-specific and are not shared across users.
+
+### GitHub Pages
+
+```sh
+npm ci
+npm run build:pages
+```
+
+The build creates `.pages-build/out` with the `/cloudlens` base path, prerendered route entry points and local static assets. The Pages version reads simulated data in the browser rather than calling a server API. Production data integrations are not available on this static host.
+
+GitHub Pages serves the generated export from the `gh-pages` branch. The main branch retains the Next.js source. After changing the application, run the static build and publish the contents of `.pages-build/out` to `gh-pages`. The optional Actions workflow template is retained at `scripts/pages-workflow.example.yml`; using it requires permission to upload Actions workflows.

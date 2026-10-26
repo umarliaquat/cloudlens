@@ -30,6 +30,10 @@ export const workspacePages = {
 } as const;
 export type WorkspacePage = keyof typeof workspacePages;
 export function pageFromPath(pathname: string): WorkspacePage {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  if (base && (pathname === base || pathname.startsWith(base + "/")))
+    pathname = pathname.slice(base.length) || "/";
+  pathname = pathname.replace(/\/$/, "") || "/";
   return (
     (Object.keys(workspacePages) as WorkspacePage[]).find(
       (key) => workspacePages[key].path === pathname,

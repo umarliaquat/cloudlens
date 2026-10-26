@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IconDots, IconArrowRight } from "@tabler/icons-react";
 import { chartTheme } from "@/styles/theme";
 import { money, shortDate } from "@/lib/format";
+import { publicAsset } from "@/lib/paths";
 import { currencyAxis } from "@/lib/chart-layout";
 import { useChartWidth } from "../use-chart-width";
 import { groupedChartLayout } from "@/styles/theme";
@@ -18,7 +19,7 @@ export const serviceIcons: Record<string, string> = {
 export function ServiceIcon({ name }: { name: string }) {
   return serviceIcons[name] ? (
     <img
-      src={`/aws/${serviceIcons[name]}.svg`}
+      src={publicAsset(`/aws/${serviceIcons[name]}.svg`)}
       className="research-service-icon"
       width={24}
       height={24}
