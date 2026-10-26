@@ -1,0 +1,5 @@
+:HL["/cloudlens/_next/static/chunks/3rv5lt29_kqru.css","style"]
+:HC["/",""]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":{"n":"section","t":"d","k":"cost-explorer","s":["design-system"]},"h":65632,"c":"$Q2"}]]
+0:{"b":"6AgccTqkIC6HwsdGENxmh","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

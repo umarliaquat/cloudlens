@@ -1,0 +1,32 @@
+1:"$Sreact.fragment"
+2:"/cloudlens/_next/static/chunks/0umf92h1sb77c.js"
+3:I[39756,["$2"],"default"]
+4:"/cloudlens/_next/static/chunks/1nk_b58aj1zjz.js"
+5:I[77659,["$2","$4"],"default"]
+6:I[37457,["$2"],"default"]
+7:"/cloudlens/_next/static/chunks/2n5qeheznvl4u.js"
+8:I[22016,["$2","$7"],""]
+f:"$Sreact.suspense"
+10:"/cloudlens/_next/static/chunks/3avkyfs2-x148.js"
+11:I[23456,["$2","$7","$10"],"StaticDemo"]
+12:I[97367,["$2"],"OutletBoundary"]
+15:"ViewportBoundary"
+16:I[97367,["$2"],"$15"]
+17:"MetadataBoundary"
+18:I[97367,["$2"],"$17"]
+:HL["/cloudlens/_next/static/chunks/3rv5lt29_kqru.css","style"]
+a:X
+d:X
+d:C
+e:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$f",null,{"fallback":["$","main",null,{"className":"main-content","children":[["$","h1",null,{"children":"CloudLens"}],["$","p",null,{"children":"Loading simulated cost workspace…"}]]}],"children":["$","$L11",null,{}]}],[["$","script","script-0",{"src":"/cloudlens/_next/static/chunks/2n5qeheznvl4u.js","async":true}],["$","script","script-1",{"src":"/cloudlens/_next/static/chunks/3avkyfs2-x148.js","async":true}]],["$","$L12",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":"$@14","v":null,"s":"$a"}}]]
+b:[["children",{"s":{"n":"section","t":"d","k":"settings","s":["design-system"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@c","v":"$d","s":"$a"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/cloudlens/_next/static/chunks/3rv5lt29_kqru.css","precedence":"next"}],["$","script","script-0",{"src":"/cloudlens/_next/static/chunks/0umf92h1sb77c.js","async":true}]],["$","html",null,{"lang":"en","data-scroll-behavior":"smooth","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/cloudlens/_next/static/chunks/1nk_b58aj1zjz.js","async":true}]],"template":["$","$L6",null,{}],"notFound":[["$","main",null,{"className":"fatal","children":[["$","p",null,{"className":"eyebrow","children":"404 / NOT FOUND"}],["$","h1",null,{"children":"This view isn’t available."}],["$","p",null,{"children":"The link may have changed. Return to your client overview."}],["$","$L8",null,{"className":"button primary","href":"/","children":"Back to overview"}]]}],[]]}]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CloudLens — Cloud cost clarity"}],["$","meta","1",{"name":"description","content":"Understand your AWS spend, investigate changes, and make confident savings decisions. Portfolio concept with simulated data."}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@19","v":null,"s":"$a"}},"a":"$@1a","u":"$@1b","b":"6AgccTqkIC6HwsdGENxmh"}
+13:null
+a:300
+1b:true
+a:C
+1a:0
+c:"$undefined"
+9:"$undefined"
+19:"$undefined"
+14:"$undefined"
