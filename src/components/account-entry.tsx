@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
-import { createClient } from "@supabase/supabase-js";
 import {
   IconArrowRight,
   IconCloud,
@@ -10,38 +9,31 @@ import {
 } from "@tabler/icons-react";
 import { money } from "@/lib/format";
 import { publicAsset } from "@/lib/paths";
-import { natProcessingComparison } from "@/server/analysis/research-workflows";
-import type { Overview } from "@/lib/domain";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
-const auth =
-  url && key
-    ? createClient(url, key, { auth: { flowType: "pkce" } }).auth
-    : null;
+const signInEnabled = Boolean(url && key);
+let authModule: Promise<SupabaseClient["auth"]> | undefined;
 const guestKey = "cloudlens-guest";
 
-function SpendPreview({ overview }: { overview: Overview }) {
-  const nat = natProcessingComparison(
-    overview.monthRecords,
-    overview.previousMonthRecords,
-  );
+function SpendPreview({ previewCost }: { previewCost: number }) {
   return (
     <aside className="entry-preview">
       <div className="entry-preview-content">
         <h2>What changed on your AWS bill?</h2>
-        {nat.prior.gb > 0 && nat.delta > 0 && (
+        {previewCost > 0 && (
           <div className="entry-finding">
             <p className="entry-preview-label">Sample NAT cost increase</p>
             <strong className="entry-finding-value num">
-              +{money(nat.delta)}
+              +{money(previewCost)}
             </strong>
           </div>
         )}
       </div>
       <img
         className="entry-photo"
-        src={publicAsset("/cloudlens-data-center.jpg")}
+        src={publicAsset("/cloudlens-data-center.webp")}
         alt=""
       />
     </aside>
@@ -49,13 +41,14 @@ function SpendPreview({ overview }: { overview: Overview }) {
 }
 
 export function AccountEntry({
-  overview,
+  previewCost,
   children,
 }: {
-  overview: Overview;
+  previewCost: number;
   children: (leave: () => void, guest: boolean) => ReactNode;
 }) {
   const [ready, setReady] = useState(false);
+  const [auth, setAuth] = useState<SupabaseClient["auth"] | null>(null);
   const [account, setAccount] = useState(false);
   const [guest, setGuest] = useState(false);
   const [signup, setSignup] = useState(false);
@@ -70,18 +63,41 @@ export function AccountEntry({
     } catch {
       // Guest access also works when browser storage is unavailable.
     }
-    if (!auth) {
+    if (!url || !key) {
       setReady(true);
       return;
     }
     const params = new URLSearchParams(window.location.search);
     if (params.has("error"))
       setError("Sign-in was interrupted. Please try again.");
-    const { data } = auth.onAuthStateChange((_event, session) => {
-      setAccount(Boolean(session));
-      setReady(true);
-    });
-    return () => data.subscription.unsubscribe();
+    const credentials = { url, key };
+    let cancelled = false;
+    let unsubscribe: (() => void) | undefined;
+    authModule ??= import("@supabase/supabase-js").then(
+      ({ createClient }) =>
+        createClient(credentials.url, credentials.key, {
+          auth: { flowType: "pkce" },
+        }).auth,
+    );
+    authModule
+      .then((clientAuth) => {
+        if (cancelled) return;
+        setAuth(clientAuth);
+        const { data } = clientAuth.onAuthStateChange((_event, session) => {
+          setAccount(Boolean(session));
+          setReady(true);
+        });
+        unsubscribe = () => data.subscription.unsubscribe();
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setError("Couldn’t reach sign-in. You can continue as a guest.");
+        setReady(true);
+      });
+    return () => {
+      cancelled = true;
+      unsubscribe?.();
+    };
   }, []);
 
   function enterAsGuest() {
@@ -163,7 +179,7 @@ export function AccountEntry({
     }
   }
 
-  if (ready && (account || guest)) return children(leave, !account);
+  if (guest || (ready && account)) return children(leave, !account);
 
   return (
     <main className="account-entry">
@@ -244,7 +260,7 @@ export function AccountEntry({
               disabled={!auth || !ready || busy}
             >
               <img
-                src={publicAsset("/google-sign-in.png")}
+                src={publicAsset("/google-sign-in-small.png")}
                 width={18}
                 height={18}
                 alt=""
@@ -252,7 +268,7 @@ export function AccountEntry({
               Continue with Google
             </button>
           </div>
-          {!auth && (
+          {!signInEnabled && (
             <p className="entry-note">
               Account sign-in is unavailable in this preview.
             </p>
@@ -267,7 +283,7 @@ export function AccountEntry({
           </button>
         </div>
       </div>
-      <SpendPreview overview={overview} />
+      <SpendPreview previewCost={previewCost} />
     </main>
   );
 }

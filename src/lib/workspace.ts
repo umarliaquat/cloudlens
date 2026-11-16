@@ -55,6 +55,13 @@ export function workspaceHref(
   role: Role,
   filters?: Record<string, string>,
 ) {
-  const query = new URLSearchParams({ ...filters, client, period, role });
-  return `${workspacePages[page].path}?${query}`;
+  const query = new URLSearchParams(filters);
+  if (client !== "brightloop") query.set("client", client);
+  if (period !== "month") query.set("period", period);
+  const defaultRole =
+    page === "portfolio" || page === "users" ? "consultant" : "engineer";
+  if (role !== defaultRole) query.set("role", role);
+  return query.size
+    ? workspacePages[page].path + "?" + query
+    : workspacePages[page].path;
 }

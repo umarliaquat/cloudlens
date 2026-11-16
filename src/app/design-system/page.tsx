@@ -95,9 +95,8 @@ export default function DesignSystem() {
       <section className="ds-section">
         <h2>Homepage states</h2>
         <p>
-          Use the demo toolbar on the overview to inspect loading, empty,
-          error and limited-history states. Working dialogs handle focus,
-          Escape, validation, role restrictions and confirmation.
+          Loading placeholders appear while the workspace or a new page opens.
+          Workspace dialogs support keyboard navigation and validation.
         </p>
         <div className="ds-actions">
           <Link className="button secondary" href="/">

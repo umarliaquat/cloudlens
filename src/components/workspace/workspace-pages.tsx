@@ -1,23 +1,45 @@
 "use client";
 import type { WorkspacePage } from "@/lib/workspace";
 import type { PageContext } from "./shared";
-import { RecommendationsPage } from "./analysis-pages";
-import { BudgetsPage, ReportsPage, AuditPage } from "./operations-pages";
-import { PortfolioPage, UsersPage, SettingsPage } from "./consultant-pages";
-import { NetworkReportPage } from "./network-report";
-import { ResearchedCostPage } from "./cost-report";
-import { InvestigationsPage } from "./investigations-page";
+import { lazy, Suspense } from "react";
+import { workspacePages } from "@/lib/workspace";
+import { WorkspaceLoadingContent } from "../workspace-loading";
+
 const pages = {
-  costs: ResearchedCostPage,
-  anomalies: InvestigationsPage,
-  recommendations: RecommendationsPage,
-  budget: BudgetsPage,
-  reports: ReportsPage,
-  audit: AuditPage,
-  portfolio: PortfolioPage,
-  users: UsersPage,
-  settings: SettingsPage,
-  network: NetworkReportPage,
+  costs: lazy(() =>
+    import("./cost-report").then((m) => ({ default: m.ResearchedCostPage })),
+  ),
+  anomalies: lazy(() =>
+    import("./investigations-page").then((m) => ({
+      default: m.InvestigationsPage,
+    })),
+  ),
+  recommendations: lazy(() =>
+    import("./analysis-pages").then((m) => ({
+      default: m.RecommendationsPage,
+    })),
+  ),
+  budget: lazy(() =>
+    import("./operations-pages").then((m) => ({ default: m.BudgetsPage })),
+  ),
+  reports: lazy(() =>
+    import("./operations-pages").then((m) => ({ default: m.ReportsPage })),
+  ),
+  audit: lazy(() =>
+    import("./operations-pages").then((m) => ({ default: m.AuditPage })),
+  ),
+  portfolio: lazy(() =>
+    import("./consultant-pages").then((m) => ({ default: m.PortfolioPage })),
+  ),
+  users: lazy(() =>
+    import("./consultant-pages").then((m) => ({ default: m.UsersPage })),
+  ),
+  settings: lazy(() =>
+    import("./consultant-pages").then((m) => ({ default: m.SettingsPage })),
+  ),
+  network: lazy(() =>
+    import("./network-report").then((m) => ({ default: m.NetworkReportPage })),
+  ),
 };
 export function WorkspacePages({
   page,
@@ -34,17 +56,19 @@ export function WorkspacePages({
     return (
       <div className="workspace-page">
         <h1>Consultant workspace</h1>
-        <p>
-          Client users can review their own costs and decisions. Switch the demo
-          persona to Consultant to review assigned clients and manage demo
-          access. This is a preview restriction, not production authentication.
-        </p>
+        <p>This demo page is available in the consultant workspace.</p>
       </div>
     );
   }
   return (
     <div className={`workspace-page page-${page}`}>
-      <Page key={context.overview.client.id} context={context} />
+      <Suspense
+        fallback={
+          <WorkspaceLoadingContent title={workspacePages[page].title} />
+        }
+      >
+        <Page key={context.overview.client.id} context={context} />
+      </Suspense>
       <footer className="page-footer">
         <span>All costs in USD · Daily buckets in UTC</span>
       </footer>

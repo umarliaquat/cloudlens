@@ -15,7 +15,7 @@ describe("GitHub Pages demo paths", () => {
     expect(publicAsset("/aws/ec2.svg")).toBe("/cloudlens/aws/ec2.svg");
     // Next Link/router adds basePath; generated hrefs must not add it twice.
     expect(workspaceHref("costs", "brightloop", "month", "engineer")).toBe(
-      "/cost-explorer?client=brightloop&period=month&role=engineer",
+      "/cost-explorer",
     );
   });
   it("retains the local server's root asset and routing paths", () => {

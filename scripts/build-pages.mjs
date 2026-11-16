@@ -68,18 +68,21 @@ import {useMemo} from 'react';
 import {usePathname,useSearchParams} from 'next/navigation';
 import {CloudLensApp} from './cloudlens-app';
 import {clients,provider} from '@/server/providers/mock';
+import {natProcessingComparison} from '@/server/analysis/research-workflows';
 const portfolio=clients.map(c=>provider.getOverview(c.id,'month'));
+const sample=portfolio.find(o=>o.client.id==='brightloop')!;
+const nat=natProcessingComparison(sample.monthRecords,sample.previousMonthRecords);
 export function StaticDemo(){
  const query=useSearchParams(),pathname=usePathname();
  const client=clients.some(c=>c.id===query.get('client'))?query.get('client')!:'brightloop';
  const period=query.get('period')==='7d'?'7d':query.get('period')==='30d'?'30d':'month';
  const role=query.get('role')==='consultant'?'consultant':query.get('role')==='executive'?'executive':!query.get('role')&&/\\/(portfolio|users)\\/?$/.test(pathname)?'consultant':'engineer';
  const overview=useMemo(()=>provider.getOverview(client,period),[client,period]);
- return <CloudLensApp initialOverview={overview} clients={clients} initialVariant="a" initialRole={role} portfolioOverviews={portfolio}/>;
+ return <CloudLensApp previewCost={nat.prior.gb>0?nat.delta:0} initialOverview={overview} clients={clients} initialVariant="a" initialRole={role} portfolioOverviews={portfolio}/>;
 }
 `,
 );
-const appFile = path.join(stage, "src/components/cloudlens-app.tsx");
+const appFile = path.join(stage, "src/components/workspace-app.tsx");
 let app = await fs.readFile(appFile, "utf8");
 const first = app.indexOf("    const controller = new AbortController();");
 const end = app.indexOf("    return () => controller.abort();", first);

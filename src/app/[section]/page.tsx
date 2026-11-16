@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Home from "../page";
+import { WorkspaceScreen } from "@/components/workspace-screen";
 import { workspacePages } from "@/lib/workspace";
 export default async function WorkspaceRoute({
   params,
@@ -14,5 +14,7 @@ export default async function WorkspaceRoute({
   const query = await searchParams;
   if ((section === "portfolio" || section === "users") && !query.role)
     query.role = "consultant";
-  return <Home searchParams={Promise.resolve(query)} />;
+  return (
+    <WorkspaceScreen searchParams={Promise.resolve(query)} section={section} />
+  );
 }

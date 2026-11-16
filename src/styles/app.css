@@ -120,7 +120,6 @@ h3 {
 .workspace {
   margin-left: var(--layout-sidebar-width);
   min-width: 0;
-  padding-bottom: var(--layout-toolbar-height);
 }
 .sidebar {
   width: var(--layout-sidebar-width);
@@ -132,7 +131,7 @@ h3 {
 }
 .desktop-sidebar {
   position: fixed;
-  inset: 0 auto var(--layout-toolbar-height) 0;
+  inset: 0 auto 0 0;
   z-index: 20;
 }
 .brand {
@@ -1432,21 +1431,6 @@ table {
   width: var(--space-3);
   height: var(--space-3);
 }
-.demo-toolbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-height: var(--layout-toolbar-height);
-  z-index: 30;
-  padding: var(--space-1) var(--space-5);
-  border-top: var(--border-width) solid var(--color-border-default);
-  background: var(--color-bg-surface);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--space-4);
-}
 .variant-switch {
   display: inline-flex;
   gap: var(--space-1);
@@ -1471,19 +1455,6 @@ table {
   color: var(--color-text-primary);
   border-color: var(--color-border-default);
   box-shadow: var(--shadow-sm);
-}
-.demo-controls {
-  display: flex;
-  gap: var(--space-3);
-}
-.demo-controls select {
-  font-size: var(--font-size-2xs);
-  border: 0;
-  background: transparent;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  padding: var(--space-1);
-  max-width: 100%;
 }
 .briefing-banner {
   display: grid;
@@ -1946,7 +1917,7 @@ table {
 }
 .toast {
   position: fixed;
-  bottom: calc(var(--layout-toolbar-height) + var(--space-5));
+  bottom: var(--space-5);
   right: var(--space-5);
   z-index: 70;
   display: flex;
@@ -2016,12 +1987,32 @@ table {
   width: var(--icon-size-large);
   height: var(--icon-size-large);
 }
-.dashboard-skeleton {
+.route-loading-brand {
+  display: block;
+  margin: var(--space-5) var(--space-4);
+  font-weight: var(--font-weight-semibold);
+}
+.route-loading-client,
+.route-loading-nav {
+  margin: 0 var(--space-3) var(--space-2);
+  min-height: var(--space-8);
+}
+.route-loading-client {
+  min-height: var(--space-12);
+  margin-bottom: var(--space-5);
+}
+.route-loading-heading {
+  width: min(240px, 60%);
+  height: var(--space-8);
+}
+.route-loading-title {
+  margin: 0;
+}
+.route-loading-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: var(--space-5);
-  min-height: 65dvh;
-  margin-bottom: var(--space-8);
+  margin-top: var(--space-5);
 }
 .skeleton {
   background: linear-gradient(
@@ -2034,15 +2025,12 @@ table {
   border-radius: var(--radius-md);
   animation: shimmer 1.5s infinite;
 }
-.metric-skeleton {
-  grid-column: 1/-1;
-  min-height: calc(var(--space-20) * 2);
+.route-loading-metrics {
+  grid-column: 1 / -1;
+  min-height: 104px;
 }
-.chart-skeleton {
-  min-height: calc(var(--space-20) * 4);
-}
-.card-skeleton {
-  min-height: calc(var(--space-20) * 2);
+.route-loading-panel {
+  min-height: 280px;
 }
 .chart-data-table {
   max-height: var(--chart-height);
@@ -2357,13 +2345,6 @@ table {
   .help-button {
     display: none;
   }
-  .demo-toolbar {
-    gap: var(--space-2);
-    padding-inline: var(--space-3);
-  }
-  .demo-controls {
-    gap: var(--space-1);
-  }
   .briefing-grid .anomalies-panel {
     margin: 0;
   }
@@ -2387,7 +2368,6 @@ table {
 @media (max-width: 640px) {
   :root {
     --layout-gutter: var(--space-4);
-    --layout-toolbar-height: var(--space-20);
     --layout-header-height: var(--space-14);
   }
   .main-content {
@@ -2556,22 +2536,8 @@ table {
     align-items: flex-start;
     gap: var(--space-2);
   }
-  .demo-toolbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-block: var(--space-2);
-    min-height: var(--layout-toolbar-height);
-  }
   .variant-switch {
     flex-shrink: 0;
-  }
-  .demo-controls {
-    justify-content: center;
-    width: 100%;
-    gap: var(--space-4);
-  }
-  .demo-controls select {
-    max-width: 44vw;
   }
   .briefing-banner {
     grid-template-columns: minmax(0, 1fr);
@@ -2637,7 +2603,6 @@ table {
 @media print {
   .sidebar,
   .topbar,
-  .demo-toolbar,
   .page-actions,
   .page-footer,
   .text-button,
