@@ -7,10 +7,12 @@ import "@/styles/workspace.css";
 import "@/styles/homepage.css";
 import "@/styles/research-pages.css";
 import "@/styles/account-entry.css";
+const description =
+  "Explore AWS spend, investigate cost changes, and find ways to save with simulated billing data.";
+
 export const metadata: Metadata = {
   title: "CloudLens — Cloud cost clarity",
-  description:
-    "Track AWS spend, investigate cost changes, and review savings opportunities.",
+  description,
 };
 export default function RootLayout({
   children,
