@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { provider } from "../src/server/providers/mock";
 import {
   comparisonReport,
+  natProcessingComparison,
   networkFlows,
   flowTotals,
   sankeyLayout,
@@ -9,6 +10,31 @@ import {
   clientReviewRows,
 } from "../src/server/analysis/research-workflows";
 describe("research-backed workspace contracts", () => {
+  it("reconciles the detailed NAT billing rows with the modeled flow total", () => {
+    const overview = provider.getOverview("brightloop", "month");
+    const report = comparisonReport(
+      overview,
+      { service: "Amazon VPC", account: "Production", region: "us-east-1" },
+      "service",
+    );
+    const nat = natProcessingComparison(report.current, report.previous);
+    const modeled = flowTotals(networkFlows("brightloop", 24));
+    expect(nat.actual).toMatchObject(modeled);
+    expect(nat.prior).toMatchObject({ gb: 40000, cost: 180000 });
+    expect(nat.delta).toBe(87300);
+    expect(
+      [...report.current, ...report.previous].every((r) => r.amount >= 0),
+    ).toBe(true);
+    const development = comparisonReport(
+      overview,
+      { account: "Development" },
+      "service",
+    );
+    expect(
+      natProcessingComparison(development.current, development.previous).actual
+        .gb,
+    ).toBe(0);
+  });
   it("keeps Sankey nodes and label wells inside desktop canvases across filters and weights", () => {
     const all = networkFlows("brightloop", 24);
     for (const width of [800, 1072, 1464])

@@ -46,7 +46,6 @@ export function WorkspacePages({
     <div className={`workspace-page page-${page}`}>
       <Page key={context.overview.client.id} context={context} />
       <footer className="page-footer">
-        <span>CloudLens · Simulated AWS data</span>
         <span>All costs in USD · Daily buckets in UTC</span>
       </footer>
     </div>

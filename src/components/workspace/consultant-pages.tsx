@@ -61,8 +61,8 @@ export function PortfolioPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Client portfolio"
-        subtitle="Maya Brooks · Your assigned client workspaces"
+        title="Clients"
+        subtitle="Review costs and open issues across your assigned clients."
       >
         <Link
           className="button primary"
@@ -134,7 +134,6 @@ export function PortfolioPage({ context: c }: { context: PageContext }) {
       </div>
       <Section
         title="Assigned clients"
-        subtitle="Prioritize your work, then open a client workspace."
         action={
           <Search
             value={search}
@@ -248,7 +247,6 @@ export function PortfolioPage({ context: c }: { context: PageContext }) {
       <div className="portfolio-note-grid">
         <Section
           title="Make the next review easier"
-          subtitle="Keep evidence, recommendations and decisions in one client-ready report."
         >
           <div className="section-body">
             <Link
@@ -427,7 +425,7 @@ export function UsersPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Users & access"
+        title="People & access"
         subtitle="Manage your consultancy team and client access"
       >
         <button className="button primary" onClick={() => setInvite(true)}>
@@ -582,7 +580,7 @@ export function UsersPage({ context: c }: { context: PageContext }) {
       </div>
       <Section
         title="Capabilities and client scope"
-        subtitle="A role controls available actions. Client assignment controls which records a person can access."
+        subtitle="Roles determine what each person can do. Client assignments determine whose data they can see."
       >
         <div className="research-capabilities">
           <div>
@@ -782,7 +780,7 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
     <>
       <PageHeader
         title="Settings"
-        subtitle="Inspect billing coverage, evidence sources and browser-local preferences"
+        subtitle="Manage preferences and see which AWS data is included."
       />
       <div className="settings-layout">
         <div
@@ -814,7 +812,6 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
             <>
               <Section
                 title="Workspace details"
-                subtitle="The client context used throughout your cost reports."
               >
                 <div className="settings-form">
                   <div className="workspace-identity">
@@ -928,14 +925,13 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
             <>
               <Section
                 title="AWS account data"
-                subtitle="A deterministic dataset shaped like AWS billing records."
-                action={<Status>Simulated provider</Status>}
+                action={<Status>Sample data</Status>}
               >
                 <div className="research-source-contract">
                   <div>
                     <h3>Billing source</h3>
                     <p>
-                      Simulated amortized line items in USD, tax excluded.
+                      Amortized line items in USD, tax excluded.
                       Complete through Oct 24 UTC. The partial current day is
                       excluded from spend and forecasts. Account inventory is
                       derived from the same records used in reports.
@@ -958,8 +954,8 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
                   <div>
                     <strong>CloudLens demo dataset</strong>
                     <p>
-                      Simulated billing history · Complete through Oct 24 ·
-                      Updated Oct 25 at 08:00 UTC
+                      Billing history · Complete through Oct 24 · Updated
+                      Oct 25 at 08:00 UTC
                     </p>
                   </div>
                 </div>
@@ -970,7 +966,6 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
                         <th>Account</th>
                         <th>Account ID</th>
                         <th>Environment</th>
-                        <th>Source</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -993,9 +988,6 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
                                   : "Shared"}
                             </Status>
                           </td>
-                          <td>
-                            <Status>Demo data</Status>
-                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -1006,10 +998,6 @@ export function SettingsPage({ context: c }: { context: PageContext }) {
                 <IconShieldCheck />
                 <div>
                   <strong>No AWS account is connected.</strong>
-                  <p>
-                    This concept uses simulated records. It never requests AWS
-                    credentials or changes infrastructure.
-                  </p>
                 </div>
               </div>
             </>

@@ -2,17 +2,24 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { IconArrowRight, IconCheck, IconBookmark } from "@tabler/icons-react";
-import { comparisonReport } from "@/server/analysis/research-workflows";
+import {
+  IconArrowRight,
+  IconCheck,
+  IconBookmark,
+  IconArrowDown,
+} from "@tabler/icons-react";
+import {
+  comparisonReport,
+  natProcessingComparison,
+} from "@/server/analysis/research-workflows";
 import { groupCosts, type GroupDimension } from "@/server/analysis/breakdown";
 import { money, percent, shortDate } from "@/lib/format";
+import type { Period } from "@/lib/domain";
 import { workspaceHref } from "@/lib/workspace";
 import {
   PageHeader,
   Section,
   Select,
-  Summary,
-  Tabs,
   Search,
   ExportButton,
   downloadCsv,
@@ -20,12 +27,7 @@ import {
 } from "./shared";
 import { Modal } from "./operations-pages";
 import { useDemoState } from "./use-demo-state";
-import {
-  ServiceIcon,
-  Delta,
-  GroupedCostChart,
-  EvidenceStrip,
-} from "./research-ui";
+import { ServiceIcon, Delta, GroupedCostChart } from "./research-ui";
 type SavedCostReport = {
   id: string;
   name: string;
@@ -60,6 +62,8 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
     { account, service, region },
     group,
   );
+  const nat = natProcessingComparison(report.current, report.previous);
+  const showNat = nat.actual.gb > 0 || nat.prior.gb > 0;
   const rows = report.rows
     .filter((r) => r.name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) =>
@@ -118,6 +122,26 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
         (r.delta / 100).toFixed(2),
         r.change?.toFixed(2) || "New baseline",
       ]),
+      ...(showNat
+        ? [
+            [
+              "Usage type",
+              "Resource",
+              "Current GB",
+              "Prior GB",
+              "Current USD",
+              "Prior USD",
+            ],
+            [
+              "NATGateway-Bytes",
+              nat.actual.resourceId ?? nat.prior.resourceId ?? "",
+              nat.actual.gb,
+              nat.prior.gb,
+              (nat.actual.cost / 100).toFixed(2),
+              (nat.prior.cost / 100).toFixed(2),
+            ],
+          ]
+        : []),
     ]);
     c.audit("Cost report exported", `${group} · ${account} · ${service}`);
     c.notify("Scoped comparison report downloaded.");
@@ -125,10 +149,8 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Cost Explorer"
-        subtitle="Compare like-for-like costs, identify contributors and inspect the evidence"
-        period={c.overview.period}
-        onPeriod={c.onPeriod}
+        title="Cost breakdown"
+        subtitle="Amortized costs in USD · Tax excluded"
       >
         <button className="button secondary" onClick={() => setSave(true)}>
           <IconBookmark />
@@ -136,94 +158,107 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
         </button>
         <ExportButton onClick={exportReport} />
       </PageHeader>
-      <div className="research-filterbar">
-        <Select
-          label="Filter account"
-          value={account}
-          options={options("account")}
-          onChange={(v) => {
-            setAccount(v);
-            persistUrl({ account: v });
-          }}
-        />
-        <Select
-          label="Filter service"
-          value={service}
-          options={options("service")}
-          onChange={(v) => {
-            setService(v);
-            persistUrl({ service: v });
-          }}
-        />
-        <Select
-          label="Filter region"
-          value={region}
-          options={options("region")}
-          onChange={(v) => {
-            setRegion(v);
-            persistUrl({ region: v });
-          }}
-        />
-        <button
-          className="text-button"
-          onClick={() => {
-            setAccount("all");
-            setService("all");
-            setRegion("all");
-            persistUrl({ account: "all", service: "all", region: "all" });
-          }}
-        >
-          Reset filters
-        </button>
-        <span>Amortized USD · tax excluded</span>
-      </div>
-      <Summary
-        items={[
-          {
-            label: "Selected actual spend",
-            value: money(report.total),
-            hint:
-              c.overview.period === "month"
-                ? "Oct 1–24 · complete days"
-                : c.overview.rangeLabel,
-          },
-          {
-            label: "Comparable prior period",
-            value: money(report.prior),
-            hint:
-              c.overview.period === "month"
-                ? "Sep 1–24"
-                : `Previous ${c.overview.completeDays} days`,
-          },
-          {
-            label: "Net cost change",
-            value: <Delta value={report.delta} />,
-            hint: percent(report.change, true),
-          },
-        ]}
-      />
-      <Section
-        title={`Daily spend by ${group}`}
-        subtitle="Series and table share the same scope. Change ranking below explains the comparison."
-      >
-        <div className="workspace-toolbar">
-          <Tabs
+      <Section title={`Daily spend by ${group}`} className="cost-report-panel">
+        <div className="workspace-toolbar cost-report-toolbar">
+          <Select
+            label="Date range"
+            value={c.overview.period}
+            options={[
+              { value: "month", label: "October 2026" },
+              { value: "7d", label: "Last 7 days" },
+              { value: "30d", label: "Last 30 days" },
+            ]}
+            onChange={(value) => c.onPeriod(value as Period)}
+          />
+          <Select
+            label="Filter account"
+            value={account}
+            options={options("account")}
+            onChange={(v) => {
+              setAccount(v);
+              persistUrl({ account: v });
+            }}
+          />
+          <Select
+            label="Filter service"
+            value={service}
+            options={options("service")}
+            onChange={(v) => {
+              setService(v);
+              persistUrl({ service: v });
+            }}
+          />
+          <Select
+            label="Filter region"
+            value={region}
+            options={options("region")}
+            onChange={(v) => {
+              setRegion(v);
+              persistUrl({ region: v });
+            }}
+          />
+          <Select
             label="Cost grouping"
             value={group}
-            onChange={(v) => {
-              setGroup(v as GroupDimension);
-              persistUrl({ group: v });
+            onChange={(value) => {
+              setGroup(value as GroupDimension);
+              persistUrl({ group: value });
             }}
-            options={["service", "account", "region"].map((v) => ({
-              value: v,
-              label: v[0].toUpperCase() + v.slice(1),
-            }))}
+            options={[
+              { value: "service", label: "Group by service" },
+              { value: "account", label: "Group by account" },
+              { value: "region", label: "Group by region" },
+            ]}
           />
+          <button
+            className="text-button"
+            onClick={() => {
+              setAccount("all");
+              setService("all");
+              setRegion("all");
+              persistUrl({ account: "all", service: "all", region: "all" });
+            }}
+          >
+            Reset filters
+          </button>
+        </div>
+        <div className="cost-report-comparison">
+          <dl>
+            <div>
+              <dt>
+                Current spend{" "}
+                <small>
+                  {c.overview.period === "month"
+                    ? "Oct 1–24"
+                    : c.overview.rangeLabel}
+                </small>
+              </dt>
+              <dd className="num">{money(report.total)}</dd>
+            </div>
+            <div>
+              <dt>
+                Prior spend{" "}
+                <small>
+                  {c.overview.period === "month"
+                    ? "Sep 1–24"
+                    : `Previous ${c.overview.completeDays} days`}
+                </small>
+              </dt>
+              <dd className="num">{money(report.prior)}</dd>
+            </div>
+            <div>
+              <dt>Change</dt>
+              <dd className="num">
+                <Delta value={report.delta} />{" "}
+                <small>{percent(report.change, true)}</small>
+              </dd>
+            </div>
+          </dl>
           <button
             className="text-button"
             onClick={() => setShowTable(!showTable)}
           >
-            {showTable ? "Show chart" : "View data table"}
+            {showTable ? "Show chart" : "View daily data"}
           </button>
         </div>
         {showTable ? (
@@ -254,58 +289,53 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
         ) : (
           <GroupedCostChart report={report} onDay={setDay} />
         )}
-      </Section>
-      {c.overview.client.id === "brightloop" &&
-        (service === "all" || service === "Amazon VPC") && (
-          <EvidenceStrip title="NAT processing increased by $873 over the comparable 24 days">
-            <span>
-              Billing identifies more GB processed, not the traffic path.{" "}
-              <Link
-                className="text-button accent"
-                href={workspaceHref(
-                  "network",
-                  c.overview.client.id,
-                  c.overview.period,
-                  c.role,
-                )}
-              >
-                Investigate network flows
-                <IconArrowRight />
-              </Link>
-            </span>
-          </EvidenceStrip>
-        )}
-      <Section
-        title={`Cost contributors by ${group}`}
-        subtitle="Increases and decreases both remain visible; contributions reconcile to the selected total."
-        action={
+        <div className="workspace-toolbar cost-contributors-heading">
+          <h3>{`Cost contributors by ${group}`}</h3>
           <Search
             value={search}
             onChange={setSearch}
             label="Search cost breakdown"
             placeholder={`Search ${group}…`}
           />
-        }
-      >
-        <div className="secondary-toolbar">
-          <Select
-            label="Sort cost contributors"
-            value={sort}
-            onChange={setSort}
-            options={["Largest increase", "Highest spend"]}
-          />
-          <span className="muted-text">
-            Prior values use the same account, service and region filters
-          </span>
         </div>
         <div className="workspace-table-scroll">
           <table className="workspace-table">
             <thead>
               <tr>
                 <th>{group}</th>
-                <th className="align-right">Actual</th>
+                <th
+                  className="align-right"
+                  aria-sort={
+                    sort === "Highest spend" ? "descending" : undefined
+                  }
+                >
+                  <button
+                    className="text-button cost-sort"
+                    onClick={() => setSort("Highest spend")}
+                  >
+                    Actual
+                    {sort === "Highest spend" && (
+                      <IconArrowDown aria-hidden="true" />
+                    )}
+                  </button>
+                </th>
                 <th className="align-right">Prior</th>
-                <th className="align-right">Change</th>
+                <th
+                  className="align-right"
+                  aria-sort={
+                    sort === "Largest increase" ? "descending" : undefined
+                  }
+                >
+                  <button
+                    className="text-button cost-sort"
+                    onClick={() => setSort("Largest increase")}
+                  >
+                    Change
+                    {sort === "Largest increase" && (
+                      <IconArrowDown aria-hidden="true" />
+                    )}
+                  </button>
+                </th>
                 <th className="align-right">Change %</th>
                 <th />
               </tr>
@@ -355,10 +385,59 @@ export function ResearchedCostPage({ context: c }: { context: PageContext }) {
           </table>
         </div>
       </Section>
-      <Section
-        title="Saved analyses"
-        subtitle="Reusable questions with their account, service, grouping and reporting range saved in this browser."
-      >
+      {showNat && (
+        <Section
+          title="NAT gateway data processing"
+          subtitle="Simulated billing detail for Production · us-east-1. The model uses the same $0.045 per GB for both periods."
+          action={
+            c.overview.period === "month" && (
+              <Link
+                className="text-button accent"
+                href={workspaceHref(
+                  "network",
+                  c.overview.client.id,
+                  "month",
+                  c.role,
+                )}
+              >
+                See where the traffic went <IconArrowRight />
+              </Link>
+            )
+          }
+        >
+          <div className="workspace-table-scroll">
+            <table className="workspace-table">
+              <thead>
+                <tr>
+                  <th>Usage type</th>
+                  <th>Resource</th>
+                  <th>Current usage</th>
+                  <th>Previous usage</th>
+                  <th>Current cost</th>
+                  <th>Previous cost</th>
+                  <th>Cost change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>NATGateway-Bytes</td>
+                  <td className="mono">
+                    {nat.actual.resourceId ?? nat.prior.resourceId}
+                  </td>
+                  <td className="num">{nat.actual.gb.toLocaleString()} GB</td>
+                  <td className="num">{nat.prior.gb.toLocaleString()} GB</td>
+                  <td className="num">{money(nat.actual.cost)}</td>
+                  <td className="num">{money(nat.prior.cost)}</td>
+                  <td className="num">
+                    <Delta value={nat.delta} />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
+      <Section title="Saved analyses" subtitle="Saved in this browser.">
         <div className="section-body research-saved-list">
           {saved.length ? (
             saved.map((r) => (

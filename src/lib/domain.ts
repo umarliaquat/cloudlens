@@ -16,6 +16,12 @@ export type CostRecord = {
   region: string;
   amount: number;
   partial: boolean;
+  usage?: {
+    type: string;
+    quantity: number;
+    unit: "GB";
+    resourceId: string;
+  };
 };
 export type Client = {
   id: string;

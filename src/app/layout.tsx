@@ -6,10 +6,11 @@ import "@/styles/app.css";
 import "@/styles/workspace.css";
 import "@/styles/homepage.css";
 import "@/styles/research-pages.css";
+import "@/styles/account-entry.css";
 export const metadata: Metadata = {
   title: "CloudLens — Cloud cost clarity",
   description:
-    "Understand your AWS spend, investigate changes, and make confident savings decisions. Portfolio concept with simulated data.",
+    "Track AWS spend, investigate cost changes, and review savings opportunities.",
 };
 export default function RootLayout({
   children,

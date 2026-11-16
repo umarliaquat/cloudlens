@@ -6,6 +6,29 @@ import type {
 } from "../../lib/domain";
 import { filterCosts, groupCosts, type GroupDimension } from "./breakdown";
 import { sumComplete, changePercent } from "./costs";
+import { brightloopNat } from "../providers/brightloop";
+
+export function natProcessingComparison(
+  current: CostRecord[],
+  previous: CostRecord[],
+) {
+  const summarize = (records: CostRecord[]) => {
+    const charges = records.filter(
+      (record) => !record.partial && record.usage?.type === "NATGateway-Bytes",
+    );
+    return {
+      gb: charges.reduce(
+        (sum, record) => sum + (record.usage?.quantity ?? 0),
+        0,
+      ),
+      cost: sumComplete(charges),
+      resourceId: charges[0]?.usage?.resourceId,
+    };
+  };
+  const actual = summarize(current);
+  const prior = summarize(previous);
+  return { actual, prior, delta: actual.cost - prior.cost };
+}
 
 export function comparisonReport(
   o: Overview,
@@ -161,7 +184,7 @@ export function networkFlows(client: string, days: number): NetworkFlow[] {
       account: "Production",
       region: "us-east-1",
       gb: scoped,
-      cost: Math.round(scoped * 4.5),
+      cost: Math.round(scoped * brightloopNat.centsPerGb),
     };
   });
 }

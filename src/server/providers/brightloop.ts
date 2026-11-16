@@ -15,6 +15,14 @@ const cumulative = [
   31504,
 ].map((v) => v * 100);
 export const demoAccounts = ["Production", "Staging", "Development", "Shared"];
+export const brightloopNat = {
+  service: "Amazon VPC",
+  account: "Production",
+  region: "us-east-1",
+  currentGb: 59400,
+  previousGb: 40000,
+  centsPerGb: 4.5,
+} as const;
 
 function allocate(total: number, weights: number[]): number[] {
   const sum = weights.reduce((a, b) => a + b, 0);
@@ -51,18 +59,44 @@ export function brightloopRecords(): CostRecord[] {
       const accounts = allocate(prior, [72, 8, 12, 8]);
       if (current) accounts[0] += now - prior;
       const daysByAccount = matrix(accounts, byService[i]);
-      daysByAccount.forEach((days, j) =>
-        days.forEach((amount, d) =>
-          out.push({
+      daysByAccount.forEach((days, j) => {
+        const account = demoAccounts[j];
+        const hasNat =
+          service === brightloopNat.service &&
+          account === brightloopNat.account;
+        // Allocate in pairs of GB so each modeled daily charge is a whole cent.
+        const natPairs = hasNat
+          ? allocate(
+              (current ? brightloopNat.currentGb : brightloopNat.previousGb) /
+                2,
+              days,
+            )
+          : [];
+        days.forEach((amount, d) => {
+          const base = {
             service,
-            account: demoAccounts[j],
-            region: "us-east-1",
+            account,
+            region: account === "Development" ? "us-west-2" : "us-east-1",
             date: `${month}-${String(d + 1).padStart(2, "0")}`,
-            amount,
             partial: false,
-          }),
-        ),
-      );
+          };
+          const quantity = (natPairs[d] ?? 0) * 2;
+          const processingCost = quantity * brightloopNat.centsPerGb;
+          out.push({ ...base, amount: amount - processingCost });
+          if (quantity) {
+            out.push({
+              ...base,
+              amount: processingCost,
+              usage: {
+                type: "NATGateway-Bytes",
+                quantity,
+                unit: "GB",
+                resourceId: "nat-brightloop-prod",
+              },
+            });
+          }
+        });
+      });
     });
   }
   return out;
@@ -95,7 +129,7 @@ export function brightloopRecommendations(
         return {
           ...r,
           title: "Review legacy gp2 volume configuration",
-      evidenceReady: false,
+          evidenceReady: false,
           resource: "production-data-volumes",
           account: "Production",
           savings: 24000,

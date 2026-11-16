@@ -8,7 +8,7 @@ A cloud-cost clarity portal for AWS consultancies and their clients. **Portfolio
 
 ## Run locally
 
-Node.js 20.9+ is required (tested on Node 24).
+Node.js 22+ is required (tested on Node 24).
 
 ```sh
 npm install
@@ -16,6 +16,8 @@ npm run dev
 ```
 
 Open http://localhost:3000.
+
+Choose **Continue as guest** to open the sample workspace. To enable account sign-in, set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in `.env.local` and restart the dev server. Enable email authentication and the Google provider in Supabase. Add the app's workspace URLs to Supabase's redirect allow list for OAuth and email confirmation. Set the same public variables in the build environment for GitHub Pages. Keep provider secrets in Supabase.
 
 - `/` — approved detailed overview: four KPIs, daily/cumulative spending, cost drivers, AWS service breakdown, measured savings and recommendations ready for review.
 - `/cost-explorer`, `/anomalies`, `/recommendations` — scoped cost analysis, investigation feed and recommendation queue.
@@ -29,6 +31,8 @@ Open http://localhost:3000.
 The demo toolbar switches personas and state previews. Date filters are reflected in the URL. Client identity belongs in the sidebar; the compact overview header shows one data-provenance line and an account-scope filter.
 
 ## Foundation
+
+The login screen uses a cropped version of [Datacenter Server Racks by Carl Lender](https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg), licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 - Next.js 16 App Router + React 19 + TypeScript.
 - CSS custom properties in `src/styles/theme.css`; semantic colors match the approved Figma study, including `color-border-active: #FFE1D1`.
@@ -46,7 +50,7 @@ Populated desktop main views are the current refinement scope. Responsive polish
 
 ## Deliberately deferred
 
-Authentication, real session switching, server-side RBAC/tenant isolation, database persistence, append-only server audit storage, complete recommendation state transitions/optimistic locking, automatic anomaly detection, AI services, background report generation, notification delivery and budget alert delivery are **not yet implemented**. UI persona restrictions are not a security boundary. All exposed API data is fictional. Use only simulated data in a hosted demonstration; real customer data requires a production security and persistence foundation.
+Server-side RBAC and tenant isolation, database persistence, append-only server audit storage, complete recommendation state transitions and optimistic locking, automatic anomaly detection, AI services, background report generation, notification delivery, and budget alert delivery remain deferred. Both guest and account sessions open the same simulated workspace. Use simulated data in the hosted demonstration.
 
 Prisma + SQLite (portable to PostgreSQL) and shared server auth/RBAC modules remain the planned foundation for durable workflows after the main screens are refined.
 

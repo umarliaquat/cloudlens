@@ -191,7 +191,7 @@ export function OverviewHome({
       <header className="home-heading">
         <div>
           <h1>Cost overview</h1>
-          <p>Demo data · Costs through Oct 24, 2026 (UTC)</p>
+          <p>Sample data · Costs through Oct 24, 2026 (UTC)</p>
         </div>
         <div className="home-actions">
           <label className="button secondary date-select">
@@ -217,7 +217,7 @@ export function OverviewHome({
         </div>
       </header>
       <div className="home-scope">
-        <label className="button secondary">
+        <label className="button secondary" data-tour-anchor="accounts">
           <span className="sr-only">Filter accounts</span>
           <select
             aria-label="Filter accounts"
@@ -346,7 +346,7 @@ export function OverviewHome({
               </p>
             </div>
             <button className="text-button accent" onClick={() => explore()}>
-              View analysis
+              View cost breakdown
               <IconArrowRight aria-hidden="true" />
             </button>
           </div>
@@ -511,7 +511,7 @@ export function OverviewHome({
         <section className="home-panel home-service-panel">
           <div className="home-panel-heading">
             <div>
-              <h2>Where the money goes</h2>
+              <h2>Spend by AWS service</h2>
               <p>
                 {o.period === "month"
                   ? "Oct 1–24 vs Sep 1–24"
@@ -523,7 +523,7 @@ export function OverviewHome({
               </p>
             </div>
             <button className="text-button accent" onClick={() => explore()}>
-              Open Cost Explorer
+              View cost breakdown
               <IconArrowRight aria-hidden="true" />
             </button>
           </div>
@@ -580,7 +580,7 @@ export function OverviewHome({
         <section className="home-panel home-outcomes">
           <div className="home-panel-heading">
             <div>
-              <h2>Changes that delivered</h2>
+              <h2>Verified savings</h2>
               <p>
                 {m.verified.length} implemented{" "}
                 {m.verified.length === 1 ? "action" : "actions"} ·{" "}
@@ -635,7 +635,7 @@ export function OverviewHome({
           <div>
             <h2>
               {role === "engineer"
-                ? "Ready for your team"
+                ? "Decisions to review"
                 : "Recommendations to review"}
             </h2>
             <p>
@@ -661,7 +661,7 @@ export function OverviewHome({
                 : showDetail({ kind: "opportunities" })
             }
           >
-            All recommendations
+            View ways to save
             <IconArrowRight aria-hidden="true" />
           </button>
         </div>
@@ -747,7 +747,7 @@ export function OverviewHome({
                     ? "Identified savings"
                     : "Export client review"
         }
-        description={`${o.client.name} · ${account === "all" ? "All accounts" : account} · Simulated data`}
+        description={`${o.client.name} · ${account === "all" ? "All accounts" : account}`}
       >
         {detail?.kind === "basis" && (
           <div className="home-detail-copy">

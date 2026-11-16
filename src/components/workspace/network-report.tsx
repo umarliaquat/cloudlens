@@ -18,7 +18,6 @@ import {
   PageHeader,
   Section,
   Select,
-  Summary,
   ExportButton,
   downloadCsv,
   type PageContext,
@@ -46,9 +45,6 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
   const rows = selected.length
     ? flows.filter((f) => selected.includes(f.id))
     : flows;
-  const billing = c.overview.monthRecords
-    .filter((r) => r.service === "Amazon VPC")
-    .reduce((s, r) => s + r.amount, 0);
   const colors = [chartTheme.spend, chartTheme.secondary, "var(--chart-3)"];
   const label = (value: number) =>
     weight === "cost" ? money(value) : `${value.toLocaleString()} GB`;
@@ -82,18 +78,16 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Network flow report"
-        subtitle="Trace modeled NAT processing costs from workload to destination"
+        title="Network costs"
+        subtitle={
+          all.length
+            ? "Modeled outbound NAT traffic · Oct 1–24, 2026 UTC · Production · us-east-1"
+            : "Outbound NAT traffic and estimated processing costs"
+        }
+        showDataNote={false}
       >
         <ExportButton onClick={exportFlows} />
       </PageHeader>
-      <div className="research-evidence-strip">
-        <strong>Simulated flow-log attribution</strong>
-        <span>
-          Oct 1–24, 2026 · Production · us-east-1 · outbound through NAT ·
-          decimal GB · causes require investigation
-        </span>
-      </div>
       {!all.length ? (
         <Section title="Network scenario scope">
           <div className="section-body">
@@ -117,30 +111,20 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
         </Section>
       ) : (
         <>
-          <Summary
-            items={[
-              {
-                label: "Estimated NAT processing",
-                value: money(totals.cost),
-                hint: "Selected modeled flows · $0.045/GB",
-              },
-              {
-                label: "Data processed",
-                value: `${totals.gb.toLocaleString()} GB`,
-                hint: "Source and destination attribution",
-              },
-              {
-                label: "VPC billing total",
-                value: money(billing),
-                hint: "Includes other VPC charges; different scope",
-              },
-            ]}
-          />
           <Section
-            title="Where network costs flow"
-            subtitle="Source workload → destination category → destination. Band width follows the selected measure."
+            title="Traffic by source and destination"
+            action={
+              <p className="network-totals muted-text" aria-live="polite">
+                <span>
+                  <strong>{money(totals.cost)}</strong> estimated NAT cost
+                </span>
+                <span>
+                  <strong>{totals.gb.toLocaleString()} GB</strong> processed
+                </span>
+              </p>
+            }
           >
-            <div className="workspace-toolbar">
+            <div className="workspace-toolbar network-filters">
               <Select
                 label="Source workload"
                 value={source}
@@ -239,9 +223,7 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
                       }
                     }}
                   >
-                    <title>
-                      {link.source} → {link.target}: {label(link.value)}
-                    </title>
+                    <title>{`${link.source} → ${link.target}: ${label(link.value)}`}</title>
                   </path>
                 ))}
                 {layout.nodes.map((n) => (
@@ -335,7 +317,7 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
             </div>
           </Section>
           <Section
-            title="Flow evidence"
+            title="Traffic paths"
             subtitle={`${rows.length} matching paths · table and diagram use the same source records`}
           >
             <div className="workspace-table-scroll">
@@ -387,7 +369,27 @@ export function NetworkReportPage({ context: c }: { context: PageContext }) {
               </table>
             </div>
           </Section>
-          <Section title="Investigation, not a prescribed fix">
+          <Section
+            title="What changed and what to check"
+            action={
+              <Link
+                className="text-button accent"
+                href={workspaceHref(
+                  "costs",
+                  c.overview.client.id,
+                  "month",
+                  c.role,
+                  {
+                    account: "Production",
+                    region: "us-east-1",
+                    service: "Amazon VPC",
+                  },
+                )}
+              >
+                View the billing detail <IconArrowRight />
+              </Link>
+            }
+          >
             <div className="research-two-column section-body">
               <div>
                 <h3>Observed</h3>

@@ -39,8 +39,8 @@ export function InvestigationsPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Anomalies"
-        subtitle="Separate observed cost changes from causes that still need investigation"
+        title="Unusual spending"
+        subtitle="Review unexpected AWS charges and see what contributed to them."
       >
         <ExportButton
           onClick={() => {
@@ -65,7 +65,7 @@ export function InvestigationsPage({ context: c }: { context: PageContext }) {
                 a.status,
               ]),
             ]);
-            c.notify("Investigation queue downloaded.");
+            c.notify("Cost changes to review downloaded.");
           }}
         />
       </PageHeader>
@@ -90,7 +90,6 @@ export function InvestigationsPage({ context: c }: { context: PageContext }) {
       />
       <Section
         title="Investigation queue"
-        subtitle="Largest observed dollar changes first. Planned growth may be expected rather than waste."
       >
         <div className="workspace-toolbar">
           <Tabs
@@ -176,8 +175,7 @@ export function InvestigationsPage({ context: c }: { context: PageContext }) {
       </Section>
       {c.overview.client.id === "brightloop" && (
         <Section
-          title="Network processing investigation"
-          subtitle="A specific route from a billed usage increase to modeled traffic evidence."
+          title="NAT gateway charges"
         >
           <div className="research-investigation-feature">
             <ServiceIcon name="Amazon VPC" />

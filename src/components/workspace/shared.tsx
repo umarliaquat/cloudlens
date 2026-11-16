@@ -63,12 +63,14 @@ export function PageHeader({
   children,
   period,
   onPeriod,
+  showDataNote = true,
 }: {
   title: string;
   subtitle: ReactNode;
   children?: ReactNode;
   period?: Period;
   onPeriod?: (period: Period) => void;
+  showDataNote?: boolean;
 }) {
   return (
     <div className="page-heading research-page-heading">
@@ -76,9 +78,11 @@ export function PageHeader({
         <h1>{title}</h1>
         <div className="page-subtext">
           <p>{subtitle}</p>
-          <span className="research-data-note">
-            Demo data · Complete through Oct 24, 2026 UTC
-          </span>
+          {showDataNote && (
+            <span className="research-data-note">
+              Costs through Oct 24, 2026 (UTC)
+            </span>
+          )}
         </div>
       </div>
       <div className="page-actions">

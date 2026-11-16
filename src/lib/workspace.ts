@@ -2,30 +2,38 @@ import type { Role } from "./domain";
 export const workspacePages = {
   overview: { title: "Cost overview", path: "/", section: "Workspace" },
   costs: {
-    title: "Cost Explorer",
+    title: "Cost breakdown",
     path: "/cost-explorer",
     section: "Workspace",
   },
-  anomalies: { title: "Anomalies", path: "/anomalies", section: "Workspace" },
+  anomalies: {
+    title: "Unusual spending",
+    path: "/anomalies",
+    section: "Workspace",
+  },
   network: {
-    title: "Network flow report",
+    title: "Network costs",
     path: "/network-flows",
     section: "Workspace",
   },
   recommendations: {
-    title: "Recommendations",
+    title: "Ways to save",
     path: "/recommendations",
     section: "Workspace",
   },
   budget: { title: "Budgets", path: "/budgets", section: "Workspace" },
   reports: { title: "Reports", path: "/reports", section: "Workspace" },
-  audit: { title: "Audit log", path: "/audit-log", section: "Workspace" },
+  audit: {
+    title: "Activity history",
+    path: "/audit-log",
+    section: "Workspace",
+  },
   portfolio: {
-    title: "Client portfolio",
+    title: "Clients",
     path: "/portfolio",
     section: "Consultancy",
   },
-  users: { title: "Users & access", path: "/users", section: "Consultancy" },
+  users: { title: "People & access", path: "/users", section: "Consultancy" },
   settings: { title: "Settings", path: "/settings", section: "Workspace" },
 } as const;
 export type WorkspacePage = keyof typeof workspacePages;
@@ -45,6 +53,8 @@ export function workspaceHref(
   client: string,
   period: string,
   role: Role,
+  filters?: Record<string, string>,
 ) {
-  return `${workspacePages[page].path}?client=${encodeURIComponent(client)}&period=${period}&role=${role}`;
+  const query = new URLSearchParams({ ...filters, client, period, role });
+  return `${workspacePages[page].path}?${query}`;
 }

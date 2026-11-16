@@ -105,7 +105,7 @@ export function CostExplorerPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Cost Explorer"
+        title="Cost breakdown"
         subtitle={`${c.overview.client.name} · Explore the drivers behind your spend`}
         period={c.overview.period}
         onPeriod={c.onPeriod}
@@ -380,7 +380,7 @@ export function AnomaliesPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Anomalies"
+        title="Unusual spending"
         subtitle={`${c.overview.client.name} · Investigate unusual changes in spend`}
       >
         <ExportButton onClick={exportData} />
@@ -567,8 +567,8 @@ export function RecommendationsPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Recommendations"
-        subtitle="Review the evidence, assign a decision and follow implementation through measurement"
+        title="Ways to save"
+        subtitle="Review estimated savings, approve changes, and track results."
       >
         <ExportButton onClick={exportData} />
       </PageHeader>

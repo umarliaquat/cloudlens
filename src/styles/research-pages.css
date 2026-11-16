@@ -3,6 +3,10 @@
   padding-bottom: 0;
   align-items: flex-start;
 }
+.research-page-heading h1 {
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.03em;
+}
 .research-page-heading .page-subtext {
   flex-direction: column;
   align-items: flex-start;
@@ -49,7 +53,7 @@
   font-weight: var(--font-weight-medium);
 }
 .research-chart {
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-4) var(--space-5);
 }
 .research-chart > svg {
   display: block;
@@ -123,6 +127,59 @@
   font-size: var(--font-size-sm);
   line-height: 1.7;
   margin-top: var(--space-2);
+}
+.workspace-panel-heading .network-totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  font-size: var(--font-size-xs);
+}
+.network-totals strong {
+  color: var(--color-text-primary);
+}
+.network-filters {
+  justify-content: flex-start;
+  gap: var(--space-2);
+}
+.cost-report-toolbar {
+  justify-content: flex-start;
+  gap: var(--space-2);
+}
+.cost-report-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5) 0;
+}
+.cost-report-comparison dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  margin: 0;
+}
+.cost-report-comparison dt,
+.cost-report-comparison small {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+.cost-report-comparison dt small {
+  margin-inline-start: var(--space-1);
+}
+.cost-report-comparison dd {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+.cost-contributors-heading {
+  border-top: var(--border-width) solid var(--color-border-default);
+}
+.workspace-table .cost-sort {
+  display: inline-flex;
+  color: inherit;
+  font: inherit;
 }
 .network-sankey {
   padding: var(--space-6);

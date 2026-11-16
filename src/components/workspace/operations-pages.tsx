@@ -199,7 +199,7 @@ export function BudgetsPage({ context: c }: { context: PageContext }) {
     <>
       <PageHeader
         title="Budgets"
-        subtitle="Review spending limits, accountable owners and forecast variance"
+        subtitle="Compare spending and forecasts with your budget limits."
       >
         <button
           className="button primary"
@@ -465,7 +465,7 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
         c.events,
       );
     const head = [
-      ["CloudLens · Portfolio concept · Simulated AWS data"],
+      ["CloudLens · Sample AWS billing data"],
       ["Client", c.overview.client.name],
       ["Period", c.overview.rangeLabel],
     ];
@@ -589,7 +589,7 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
     <>
       <PageHeader
         title="Reports"
-        subtitle="Prepare a client review with financial position, explained changes and pending decisions"
+        subtitle="Create and export monthly client reviews."
         period={c.overview.period}
         onPeriod={c.onPeriod}
       >
@@ -600,7 +600,6 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
       </PageHeader>
       <Section
         title={`Client review · ${c.overview.rangeLabel}`}
-        subtitle="A review that connects financial position, explained variance and the decisions that follow."
       >
         <div className="research-review-grid">
           <div>
@@ -655,8 +654,8 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
               needs a baseline, observation window and recorded implementation.
             </p>
             <p>
-              This is not cash saved in the selected month. All records are
-              simulated.
+              Verified run rate is a monthly estimate based on the observed
+              savings window.
             </p>
             <button
               className="button primary"
@@ -682,7 +681,6 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
       </div>
       <Section
         title="Report library"
-        subtitle="Generated reports for this client workspace."
         action={
           <Search
             value={search}
@@ -729,10 +727,7 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
                       <span className="resource-tile">
                         <IconFileText />
                       </span>
-                      <span>
-                        <strong>{r.title}</strong>
-                        <small>Client report · Simulated data</small>
-                      </span>
+                      <strong>{r.title}</strong>
                     </button>
                   </td>
                   <td>{r.period}</td>
@@ -791,8 +786,8 @@ export function ReportsPage({ context: c }: { context: PageContext }) {
               </table>
             </div>
             <p className="report-disclosure">
-              Portfolio concept using simulated AWS data. Forecasts and
-              identified savings are estimates; verification is simulated.
+              Forecasts and identified savings are estimates. Verified savings
+              are reported as a monthly run rate.
             </p>
             <div className="modal-actions report-actions">
               <button
@@ -962,8 +957,8 @@ export function AuditPage({ context: c }: { context: PageContext }) {
   return (
     <>
       <PageHeader
-        title="Audit log"
-        subtitle="Follow recorded decisions, implementation and measurement within this client"
+        title="Activity history"
+        subtitle="See who changed a budget or recorded a savings decision."
       >
         <ExportButton onClick={exportData} />
       </PageHeader>

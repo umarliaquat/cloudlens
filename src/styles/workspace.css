@@ -33,7 +33,7 @@
   flex-wrap: wrap;
 }
 .workspace-panel-heading {
-  padding: var(--space-5) var(--space-6);
+  padding: var(--space-4) var(--space-5);
   border-bottom: var(--border-width) solid var(--color-border-default);
 }
 .workspace-panel-heading p,
@@ -44,7 +44,7 @@
   margin-top: var(--space-1);
 }
 .workspace-toolbar {
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-3) var(--space-5);
   border-bottom: var(--border-width) solid var(--color-border-default);
 }
 .secondary-toolbar {

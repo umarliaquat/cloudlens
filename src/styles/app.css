@@ -49,6 +49,7 @@ a {
   color: inherit;
 }
 button svg,
+.button > svg,
 .badge svg {
   width: var(--icon-size);
   height: var(--icon-size);
@@ -211,7 +212,7 @@ h3 {
   flex-shrink: 0;
   color: var(--color-text-muted);
 }
-.sidebar-search {
+.header-search {
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -221,19 +222,9 @@ h3 {
   border-radius: var(--radius-sm);
   background: var(--color-bg-surface);
   color: var(--color-text-muted);
-  margin-top: var(--space-4);
+  min-width: var(--layout-sidebar-width);
+  white-space: nowrap;
   font-size: var(--font-size-xs);
-}
-.sidebar-search span {
-  flex: 1;
-  text-align: left;
-}
-kbd {
-  font: var(--font-size-2xs) var(--font-sans);
-  color: var(--color-text-muted);
-  padding: var(--space-1);
-  background: var(--color-bg-subtle);
-  border-radius: var(--space-1);
 }
 .nav-section-label {
   font-size: var(--font-size-2xs);
@@ -416,14 +407,6 @@ nav {
   align-items: center;
   gap: var(--space-5);
 }
-.data-freshness {
-  display: inline-flex;
-  gap: var(--space-2);
-  align-items: center;
-  font-size: var(--font-size-2xs);
-  color: var(--color-text-muted);
-}
-.data-freshness i,
 .status-dot {
   width: var(--space-1);
   height: var(--space-1);
@@ -615,8 +598,10 @@ nav {
   padding: 0;
   min-width: 0;
 }
-.date-select > svg:last-child {
+.date-select > .tabler-icon-chevron-down,
+.home-scope .button > .tabler-icon-chevron-down {
   width: var(--space-3);
+  height: var(--space-3);
 }
 .overview-meta {
   display: flex;
@@ -662,7 +647,6 @@ nav {
 .badge {
   padding-inline: var(--chip-padding-inline);
 }
-.sidebar-search,
 .client-select,
 .brand,
 nav {
@@ -1460,30 +1444,8 @@ table {
   background: var(--color-bg-surface);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-4);
-}
-.demo-label {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font: var(--font-size-2xs) var(--font-mono);
-  color: var(--color-text-secondary);
-}
-.demo-label > span:last-child {
-  font-family: var(--font-sans);
-  color: var(--color-text-muted);
-}
-.demo-orbit {
-  width: var(--space-2);
-  height: var(--space-2);
-  border: var(--border-width) solid var(--color-accent-default);
-  border-radius: var(--radius-full);
-  box-shadow: inset 0 0 0 var(--border-heavy) var(--color-bg-surface);
-  background: var(--color-accent-default);
-}
-.toolbar-dot {
-  color: var(--color-border-strong);
 }
 .variant-switch {
   display: inline-flex;
@@ -1850,6 +1812,7 @@ table {
   justify-content: space-between;
   gap: var(--space-4);
   text-align: left;
+  text-decoration: none;
   padding: var(--space-4) 0;
 }
 .drawer-list-button strong {
@@ -2219,9 +2182,6 @@ table {
   .sidebar .client-select small {
     display: none;
   }
-  .sidebar .sidebar-search {
-    margin-top: var(--space-3);
-  }
   .sidebar .nav-section-label {
     padding-top: var(--space-5);
   }
@@ -2288,9 +2248,6 @@ table {
   }
   .topbar-actions {
     gap: var(--space-3);
-  }
-  .data-freshness {
-    display: none;
   }
   .recommendation-row {
     padding-inline: var(--space-3);
@@ -2369,10 +2326,6 @@ table {
   .page-actions {
     padding-top: var(--space-4);
   }
-  .demo-label > span:last-child,
-  .toolbar-dot {
-    display: none;
-  }
   .analytics-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr);
   }
@@ -2408,9 +2361,6 @@ table {
     gap: var(--space-2);
     padding-inline: var(--space-3);
   }
-  .demo-label {
-    display: none;
-  }
   .demo-controls {
     gap: var(--space-1);
   }
@@ -2445,6 +2395,14 @@ table {
   }
   .topbar {
     padding-inline: var(--space-3);
+  }
+  .header-search {
+    justify-content: center;
+    min-width: var(--space-9);
+    padding: 0;
+  }
+  .header-search span {
+    display: none;
   }
   .breadcrumbs {
     gap: var(--space-2);
@@ -2717,6 +2675,6 @@ table {
     background: var(--color-bg-surface);
   }
   .page-heading p::after {
-    content: " Portfolio concept · Simulated AWS data.";
+    content: " · Sample data";
   }
 }

@@ -6,10 +6,16 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   pageFromPath,
   workspaceHref,
+  workspacePages,
   type WorkspacePage,
 } from "@/lib/workspace";
 import { WorkspacePages } from "./workspace/workspace-pages";
+import { AccountEntry } from "./account-entry";
 import { OverviewHome } from "./overview-home";
+import {
+  markFirstWorkspaceTourVisit,
+  WorkspaceTour,
+} from "./workspace-tour";
 import {
   IconArrowDown,
   IconArrowUpRight,
@@ -68,14 +74,14 @@ const roles: Record<Role, { name: string; title: string; initials: string }> = {
   consultant: { name: "Maya Brooks", title: "Consultant", initials: "MB" },
 };
 const nav = [
-  ["Overview", IconLayoutDashboard, "overview"],
-  ["Cost Explorer", IconChartLine, "costs"],
-  ["Network flows", IconTopologyStar3, "network"],
-  ["Anomalies", IconAlertCircle, "anomalies"],
-  ["Recommendations", IconBulb, "recommendations"],
-  ["Budgets", IconWallet, "budget"],
-  ["Reports", IconFileText, "reports"],
-  ["Audit Log", IconHistory, "audit"],
+  [IconLayoutDashboard, "overview"],
+  [IconChartLine, "costs"],
+  [IconTopologyStar3, "network"],
+  [IconAlertCircle, "anomalies"],
+  [IconBulb, "recommendations"],
+  [IconWallet, "budget"],
+  [IconFileText, "reports"],
+  [IconHistory, "audit"],
 ] as const;
 function Badge({
   children,
@@ -174,18 +180,31 @@ const initialAudit: AuditEvent[] = [
   },
 ];
 
-export function CloudLensApp({
+export function CloudLensApp(props: Omit<Parameters<typeof WorkspaceApp>[0], "leave" | "guest">) {
+  const preview = props.portfolioOverviews?.find((overview) => overview.client.id === "brightloop") ?? props.initialOverview;
+  return (
+    <AccountEntry overview={preview}>
+      {(leave, guest) => <WorkspaceApp {...props} leave={leave} guest={guest} />}
+    </AccountEntry>
+  );
+}
+
+function WorkspaceApp({
   initialOverview,
   clients,
   initialVariant,
   initialRole = "engineer",
   portfolioOverviews = [],
+  leave,
+  guest,
 }: {
   initialOverview: Overview;
   clients: Client[];
   initialVariant: "a" | "b";
   initialRole?: Role;
   portfolioOverviews?: Overview[];
+  leave: () => void;
+  guest: boolean;
 }) {
   const activePage = pageFromPath(usePathname());
   const router = useRouter();
@@ -203,6 +222,8 @@ export function CloudLensApp({
   const [loading, setLoading] = useState(false);
   const [fetchError, setFetchError] = useState("");
   const [panel, setPanel] = useState<string | null>(null);
+  const [tourOpen, setTourOpen] = useState(false);
+  const tourReplayTrigger = useRef<HTMLElement | null>(null);
   const [mobileNav, setMobileNav] = useState(false);
   const [chartTable, setChartTable] = useState(false);
   const [query, setQuery] = useState("");
@@ -337,6 +358,14 @@ export function CloudLensApp({
     return () => clearTimeout(timer);
   }, [toast]);
   useEffect(() => {
+    if (activePage !== "overview") {
+      setTourOpen(false);
+    } else if (markFirstWorkspaceTourVisit()) {
+      setTourOpen(true);
+    }
+  }, [activePage]);
+  useEffect(() => {
+    if (tourOpen) return;
     const listener = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
@@ -345,7 +374,7 @@ export function CloudLensApp({
     };
     window.addEventListener("keydown", listener);
     return () => window.removeEventListener("keydown", listener);
-  }, []);
+  }, [tourOpen]);
   function open(next: string) {
     if (document.activeElement instanceof HTMLElement)
       lastPanelTrigger.current = document.activeElement;
@@ -453,6 +482,37 @@ export function CloudLensApp({
       `Recommendation ${status.toLowerCase()}. Decision recorded in the demo audit log.`,
     );
   }
+  const searchResults = [
+    ...(Object.keys(workspacePages) as WorkspacePage[])
+      .filter(
+        (page) =>
+          role === "consultant" ||
+          workspacePages[page].section !== "Consultancy",
+      )
+      .map((page) => ({
+        name: workspacePages[page].title,
+        target: page,
+        detail: "Page",
+        href: workspaceHref(page, clientId, period, role),
+      })),
+    ...overview.services.map((s) => ({
+      name: s.name,
+      target: `service:${s.name}`,
+      detail: "AWS service",
+      href: null,
+    })),
+    ...recommendations.map((r) => ({
+      name: r.title,
+      target: `recommendation:${r.id}`,
+      detail: r.resource,
+      href: null,
+    })),
+  ].filter((result) =>
+    `${result.name} ${result.detail}`
+      .toLowerCase()
+      .includes(query.trim().toLowerCase()),
+  );
+
   const Sidebar = (
     <>
       <div className="brand">
@@ -499,46 +559,40 @@ export function CloudLensApp({
         </span>
         {role === "consultant" && <IconChevronDown />}
       </label>
-      <button className="sidebar-search" onClick={() => open("search")}>
-        <IconSearch />
-        <span>Search anything...</span>
-        <kbd>⌘ K</kbd>
-      </button>
       {role === "consultant" && (
         <>
-          <div className="nav-section-label">CONSULTANCY</div>
-          <nav aria-label="Consultancy navigation">
-            {[
-              ["Client portfolio", IconBriefcase, "portfolio"],
-              ["Users & access", IconUsers, "users"],
-            ].map(([label, Icon, target]) => {
-              const NavIcon = Icon as typeof IconBriefcase;
-              const page = target as WorkspacePage;
-              return (
-                <Link
-                  key={page}
-                  href={workspaceHref(page, clientId, period, role)}
-                  className={`nav-item ${activePage === page ? "active" : ""}`}
-                  aria-current={activePage === page ? "page" : undefined}
-                  onClick={() => {
-                    setMobileNav(false);
-                    setPanel(null);
-                  }}
-                >
-                  <NavIcon />
-                  <span>{String(label)}</span>
-                </Link>
-              );
-            })}
+          <div className="nav-section-label">MANAGE CLIENTS</div>
+          <nav aria-label="Manage clients">
+            {(
+              [
+                [IconBriefcase, "portfolio"],
+                [IconUsers, "users"],
+              ] as const
+            ).map(([Icon, page]) => (
+              <Link
+                key={page}
+                href={workspaceHref(page, clientId, period, role)}
+                className={`nav-item ${activePage === page ? "active" : ""}`}
+                aria-current={activePage === page ? "page" : undefined}
+                onClick={() => {
+                  setMobileNav(false);
+                  setPanel(null);
+                }}
+              >
+                <Icon />
+                <span>{workspacePages[page].title}</span>
+              </Link>
+            ))}
           </nav>
         </>
       )}
-      <div className="nav-section-label">WORKSPACE</div>
+      <div className="nav-section-label">CLIENT WORKSPACE</div>
       <nav aria-label="Main navigation">
-        {nav.map(([label, Icon, target]) => (
+        {nav.map(([Icon, target]) => (
           <Link
             key={target}
             href={workspaceHref(target, clientId, period, role)}
+            data-tour-anchor={target}
             aria-current={target === activePage ? "page" : undefined}
             className={`nav-item ${target === activePage ? "active" : ""}`}
             onClick={() => {
@@ -547,7 +601,7 @@ export function CloudLensApp({
             }}
           >
             <Icon />
-            <span>{label}</span>
+            <span>{workspacePages[target].title}</span>
             {target === "anomalies" && openAnomalies.length > 0 && (
               <span className="nav-count">{openAnomalies.length}</span>
             )}
@@ -1155,18 +1209,31 @@ export function CloudLensApp({
             >
               <IconMenu2 />
             </button>
-            {activePage !== "overview" && <span>Client workspace</span>}
+            <button
+              type="button"
+              className="header-search"
+              aria-label="Search workspace"
+              aria-keyshortcuts="Control+K Meta+K"
+              aria-haspopup="dialog"
+              onClick={() => open("search")}
+            >
+              <IconSearch aria-hidden="true" />
+              <span>Search workspace</span>
+            </button>
           </div>
           <div className="topbar-actions">
-            {activePage !== "overview" && (
-              <span className="data-freshness">
-                <i />
-                Updated at 08:00 UTC
-              </span>
-            )}
-            <button className="help-button" onClick={() => open("about")}>
-              <IconBook2 />
-              Help & resources
+            <button className="text-button" onClick={leave}>{guest ? "Exit guest mode" : "Sign out"}</button>
+            <button
+              className={
+                activePage === "overview"
+                  ? "help-button overview-help"
+                  : "help-button"
+              }
+              aria-label="Help & resources"
+              onClick={() => open("about")}
+            >
+              <IconBook2 aria-hidden="true" />
+              <span>Help & resources</span>
             </button>
             <span className="vertical-divider" />
             <button
@@ -1370,11 +1437,6 @@ export function CloudLensApp({
           )}
         </main>
         <div className="demo-toolbar" aria-label="Demo controls">
-          <div className="demo-label">
-            <span className="demo-orbit" />
-            CONCEPT DEMO<span className="toolbar-dot">·</span>
-            <span>Simulated AWS data</span>
-          </div>
           <div className="demo-controls">
             <label>
               <span className="sr-only">Demo persona</span>
@@ -1415,8 +1477,12 @@ export function CloudLensApp({
           <Dialog.Overlay className="dialog-overlay" />
           <Dialog.Content
             className={`drawer ${panel === "search" ? "search-dialog" : ""}`}
+            {...(!currentRecommendation && !currentAnomaly
+              ? { "aria-describedby": undefined }
+              : {})}
             onCloseAutoFocus={(e) => {
               e.preventDefault();
+              if (tourReplayTrigger.current) return;
               if (lastPanelTrigger.current?.isConnected)
                 lastPanelTrigger.current.focus();
               else document.getElementById("main")?.focus();
@@ -1437,8 +1503,8 @@ export function CloudLensApp({
                     : currentAnomaly
                       ? "Anomaly details"
                       : {
-                          costs: "Cost Explorer",
-                          anomalies: "Anomalies",
+                          costs: workspacePages.costs.title,
+                          anomalies: workspacePages.anomalies.title,
                           recommendations: "Savings recommendations",
                           budget: "Monthly budget",
                           reports: "Create a report",
@@ -1448,7 +1514,7 @@ export function CloudLensApp({
                           settings: "Workspace settings",
                           reset: "Reset demo changes",
                           persona: "Explore another perspective",
-                          about: "A clearer view of your cloud",
+                          about: "Help & resources",
                         }[panel || ""] || "Cost breakdown"}
                 </Dialog.Title>
               </div>
@@ -1458,13 +1524,13 @@ export function CloudLensApp({
                 </button>
               </Dialog.Close>
             </div>
-            <Dialog.Description className="drawer-description">
-              {currentRecommendation
-                ? "Review the evidence and decide what happens next."
-                : currentAnomaly
-                  ? "Understand what changed before taking action."
-                  : "Portfolio concept · All data and changes are simulated."}
-            </Dialog.Description>
+            {(currentRecommendation || currentAnomaly) && (
+              <Dialog.Description className="drawer-description">
+                {currentRecommendation
+                  ? "Review the evidence and decide what happens next."
+                  : "Understand what changed before taking action."}
+              </Dialog.Description>
+            )}
             <div className="drawer-body">
               {currentRecommendation && (
                 <>
@@ -1903,7 +1969,7 @@ export function CloudLensApp({
                     Export period costs
                   </button>
                   <p className="muted-text">
-                    Filter by account, service and region in Cost Explorer.
+                    Filter by account, service and region in Cost breakdown.
                   </p>
                 </>
               )}
@@ -1991,7 +2057,7 @@ export function CloudLensApp({
                     Print overview / Save as PDF
                   </button>
                   <p className="muted-text">
-                    Reports use simulated data. Open the report library to
+                    Open the report library to
                     create and save a cost summary or savings report.
                   </p>
                   <button
@@ -2074,8 +2140,8 @@ export function CloudLensApp({
                     <IconSearch />
                     <input
                       autoFocus
-                      aria-label="Search resources, services and recommendations"
-                      placeholder="Search services, resources, recommendations…"
+                      aria-label="Search pages, services and ways to save"
+                      placeholder="Search pages, services and ways to save…"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
                     />
@@ -2083,24 +2149,21 @@ export function CloudLensApp({
                   <p className="eyebrow">
                     {query ? "RESULTS" : "QUICK ACCESS"}
                   </p>
-                  {[
-                    ...overview.services.map((s) => ({
-                      name: s.name,
-                      target: `service:${s.name}`,
-                      detail: "AWS service",
-                    })),
-                    ...recommendations.map((r) => ({
-                      name: r.title,
-                      target: `recommendation:${r.id}`,
-                      detail: r.resource,
-                    })),
-                  ]
-                    .filter((s) =>
-                      `${s.name} ${s.detail}`
-                        .toLowerCase()
-                        .includes(query.toLowerCase()),
-                    )
-                    .map((s) => (
+                  {searchResults.map((s) =>
+                    s.href ? (
+                      <Link
+                        className="drawer-list-button"
+                        key={s.target}
+                        href={s.href}
+                        onClick={() => setPanel(null)}
+                      >
+                        <span>
+                          <strong>{s.name}</strong>
+                          <small>{s.detail}</small>
+                        </span>
+                        <IconArrowRight />
+                      </Link>
+                    ) : (
                       <button
                         className="drawer-list-button"
                         key={s.target}
@@ -2112,19 +2175,14 @@ export function CloudLensApp({
                         </span>
                         <IconArrowRight />
                       </button>
-                    ))}
-                  {query &&
-                    ![
-                      ...overview.services.map((s) => s.name),
-                      ...recommendations.map((r) => r.title + " " + r.resource),
-                    ].some((s) =>
-                      s.toLowerCase().includes(query.toLowerCase()),
-                    ) && (
-                      <p>
-                        No results. Try a service name such as EC2 or a resource
-                        name.
-                      </p>
-                    )}
+                    ),
+                  )}
+                  {query && searchResults.length === 0 && (
+                    <p>
+                      No results. Try a service name such as EC2 or a resource
+                      name.
+                    </p>
+                  )}
                 </>
               )}
               {panel === "persona" && (
@@ -2232,7 +2290,7 @@ export function CloudLensApp({
               {panel === "about" && (
                 <>
                   <ReportIllustration kind="audit" />
-                  <h3>Clarity before complexity.</h3>
+                  <h3>About this workspace</h3>
                   <p>
                     CloudLens helps AWS consultancies and their clients
                     understand spend, investigate unusual changes and make
@@ -2241,26 +2299,43 @@ export function CloudLensApp({
                   <div className="info-banner">
                     <IconInfoCircle />
                     <span>
-                      This portfolio concept uses simulated data. It does not
-                      connect to AWS or execute infrastructure changes.
+                      This workspace uses sample AWS billing data. Budget
+                      edits and recommendation decisions are saved in this browser.
                     </span>
                   </div>
-                  <h4>Working in this preview</h4>
-                  <p>
-                    Explore cost data, review recommendations, change a demo
-                    budget and inspect loading, empty and error states.
-                  </p>
-                  <p>
-                    Workspace pages use simulated data and browser-local demo
-                    changes. Authentication and server persistence are planned
-                    for a later phase.
-                  </p>
+                  {activePage === "overview" && (
+                    <button
+                      className="button secondary"
+                      type="button"
+                      onClick={() => {
+                        tourReplayTrigger.current = lastPanelTrigger.current;
+                        setPanel(null);
+                        setTourOpen(true);
+                      }}
+                    >
+                      <IconBook2 aria-hidden="true" />
+                      Take the workspace tour
+                    </button>
+                  )}
                 </>
               )}
             </div>
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
+      {activePage === "overview" && tourOpen && (
+        <WorkspaceTour
+          onDismiss={() => setTourOpen(false)}
+          onRestoreFocus={() => {
+            const trigger = tourReplayTrigger.current;
+            tourReplayTrigger.current = null;
+            const fallback = document.getElementById("main");
+            (trigger?.isConnected ? trigger : fallback)?.focus({
+              preventScroll: true,
+            });
+          }}
+        />
+      )}
       {toast && (
         <div className="toast" role="status">
           <IconCircleCheck />
